@@ -23,10 +23,17 @@
 define('DB_NAME', 'wordpress');
 
 /** MySQL database username */
+<<<<<<< HEAD
 define('DB_USER', 'nathaniel');
 
 /** MySQL database password */
 define('DB_PASSWORD', '');
+=======
+define('DB_USER', 'n-web120-port-db');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'V/dX/YDFh');
+>>>>>>> 1df1fbdf936907348f65da8d9df6a9557e814780
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
