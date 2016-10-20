@@ -1,0 +1,51 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<section id="News-Section" class="news-gradient content">
+		<div class="inner-content">
+			{% for post in posts %}
+				<div class="frq-accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<!-- PANEL STARTS HERE -->
+						{% if loop.index0 == 0 %}
+							{% set expanded = true %}
+						  {% set class = ' in' %}
+						{% else %}
+							{% set expanded = false %}
+							{% set class = '' %}
+						{% endif %}
+						<div class="panel-heading" role="tab" data-toggle="collapse"
+							data-parent="#accordion" href="#News{{loop.index}}"
+							aria-expanded="{{expanded}}" aria-controls="collapse{{loop.index}}">
+							<div class="future-box-date panel-heading-date">
+								<span class="text-centered">{{post.date|date('m/d/Y')}}</span>
+							</div>
+							<div class="panel-title">
+								<span data-toggle="collapse">
+									{{post.title}}
+								</span>
+							</div>
+							<!-- PANEL HEADING ENDS HERE -->
+							<div id="News{{loop.index}}" class="panel-collapse collapse {{class}}" role="tabpanel" aria-labelledby="headingFive">
+								{% if post.video %}
+									<div class="video-wrapper">
+										<video loop poster="{{post.thumbnail.src()}}">
+											<source src="{{post.get_field('video').url}}"
+												type="{{post.get_field('video').mime_type}}">
+										</video>
+										<div class="playpause"></div>
+									</div>
+								{% else %}
+									<img src="{{post.thumbnail.src()}}"
+										alt="{{post.thumbnail.caption}}" />
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			<div id="nextpage"
+				data-url=data-next="{{pagination.next.link}}"></div>
+		</div>
+	</section>
+{% endblock %}

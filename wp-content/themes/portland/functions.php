@@ -43,6 +43,9 @@ class WoodChippr extends TimberSite {
 		/* CHIPPR post_types: FRQs */
     include_once 'inc/post_type/frq.php';
 
+		/* CHIPPR post_types: News */
+    include_once 'inc/post_type/news.php';
+
 		/* CHIPPR custom fields */
     include_once 'inc/acf/acf.php';
 
