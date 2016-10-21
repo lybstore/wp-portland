@@ -1013,14 +1013,8 @@ body {
   background-color: #000 !important; }
 
 @media only screen and (min-width: 320px) {
-  #News-Section .inner-content {
-    padding: 9em 1em 2.5em; }
   #News-Section .panel-heading-date span {
     font-family: portland-book; }
-  #News-Section .panel-title {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    top: 0px; }
   #News-Section .video-wrapper {
     padding: 1em 1em 0.5em; }
     #News-Section .video-wrapper video {
@@ -1046,14 +1040,16 @@ body {
 
 @media only screen and (min-width: 320px) {
   .content {
-    padding: 9em 1em 0; }
+    padding: 9em 1em 2em; }
 
-  #frq-Section .panel-heading-date {
+  .panel-heading-date {
     width: 95px;
     height: 109px;
-    padding: 0; }
+    padding: 0;
+    background-color: #000;
+    color: #fff; }
 
-  .frq-accordion:last-child {
+  .accordion:last-child {
     padding-bottom: 0.8em; }
 
   .panel-collapse p {
@@ -1067,10 +1063,9 @@ body {
     padding-right: 2em; }
     .panel-collapse p:first-child {
       float: left;
-      padding-left: 0em;
+      padding-left: 7em;
       padding-right: 0em;
       text-align: center;
-      margin-left: 7.3em;
       padding-top: 2em; }
     .panel-collapse p:last-child {
       padding-left: 9.8em;
@@ -1084,52 +1079,56 @@ body {
   .panel {
     border: transparent;
     box-shadow: none;
-    cursor: pointer; }
+    cursor: pointer;
+    max-width: 704px;
+    margin: 0 auto 1em; }
 
   .panel-heading {
     padding: 0;
     border-bottom: transparent;
     background-color: #fff !important;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
 
   .panel-title {
     display: inline-block;
-    padding-left: 0em;
     font-size: 0.8em;
-    position: absolute;
-    top: 14px;
-    margin-top: 0.5em; }
-    .panel-title span {
-      font-weight: normal;
-      font-family: portland-book;
-      font-size: 1em;
-      padding-left: 0; }
-      .panel-title span strong {
-        font-size: 1.2em;
-        padding: 0em 0em 0em 1em; }
+    margin-top: 1.5em;
+    font-family: portland-book;
+    max-width: 500px; } }
+  @media only screen and (min-width: 320px) and (min-width: 250px) and (max-width: 500px) {
+    .panel-title {
+      max-width: 265px; } }
+  @media only screen and (min-width: 320px) and (min-width: 500px) and (max-width: 700px) {
+    .panel-title {
+      max-width: 365px; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .panel-title {
+      margin-left: 0.9em; } }
+@media only screen and (min-width: 320px) {
+    .panel-title span strong {
+      font-size: 1.2em;
+      float: left;
+      margin-top: 1em; }
+    .panel-title span p {
+      margin-left: 0em;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 600px;
+      margin-top: 1.3em;
+      padding: 0em 1.5em 0 2em; } }
+    @media only screen and (min-width: 320px) and (max-width: 400px) {
       .panel-title span p {
-        margin-left: 0em;
-        width: 100%;
-        max-width: 600px;
-        padding: 0em 1.5em 0 3em;
-        margin-top: -1.6em; } }
-      @media only screen and (min-width: 320px) and (max-width: 400px) {
-        .panel-title span p {
-          max-width: 262px; } }
+        max-width: 262px; } }
 
 @media only screen and (min-width: 320px) {
   .panel-heading-date {
-    padding: 2em 0;
-    background-color: #000;
-    color: #fff;
-    display: inline-block;
-    height: 89px;
-    min-width: 95px; }
-    .panel-heading-date span {
-      padding: 0em 0.5em;
-      line-height: 2.5em; } }
+    height: 112px;
+    min-width: 95px;
+    text-align: center;
+    float: left; } }
 @media only screen and (min-width: 768px) {
-  .frq-accordion {
+  .accordion {
     width: 735px;
     margin: 0 auto; }
 
@@ -1137,29 +1136,12 @@ body {
     padding-right: 2em; }
 
   .panel-title {
-    display: inline-block;
-    width: 600px;
+    max-width: 597px;
     float: right;
-    margin-top: 1.5em;
-    margin-right: 0em; }
-    .panel-title span {
-      font-family: portland-book;
-      font-weight: normal;
-      font-size: 1em; } }
-@media only screen and (min-width: 1360px) {
-  .frq-accordion:first-child {
-    padding-top: 90px; }
-
-  .panel-title {
-    display: inline-block;
-    width: 600px;
-    float: right;
-    margin-top: 2em;
-    margin-right: 0em; }
-    .panel-title span {
-      font-family: portland-book;
-      font-weight: normal;
-      font-size: 1em; } }
+    margin-right: 0em; } }
+@media only screen and (min-width: 768px) and (min-width: 1360px) {
+  .accordion:first-child {
+    padding-top: 90px; } }
 body {
   background-color: black; }
 
