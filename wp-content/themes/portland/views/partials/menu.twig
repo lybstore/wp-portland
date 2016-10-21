@@ -1,0 +1,30 @@
+<header ng-controller="navCtrl">
+	<nav role="navigation">
+		<div id="Navigation">
+			<a href="{{site.url}}"><img src="{{theme.link}}/assets/global/logo.png"></a></a>
+			<a ng-click="navToggle()" class="nav-hamburger"><img src="{{theme.link}}/assets/global/Hambergerrrr.svg"></a>
+		</div>
+		<div ng-class="{overlayVisble: overlay}" class="overlay"></div>
+		<section ng-class="{isVisble: navSlide}" class="nav-overlay">
+			<a class="close-btn" ng-click="close()"><img src="{{theme.link}}/assets/global/X.svg"></a>
+			<div>
+        {% for item in mainmenu.items %}
+  				<div class="sidenav-padding">
+            {% if item.children %}
+    					<a ng-click="workToggle()" class="sidenav-titles cursor">{{item.title}}</a>
+              <ul class="no-margin nav-submenu">
+                <div id="myList" class="hiddenMenu" ng-class="{isHidden: toggleMenu}">
+                  {% for child in item.children %}
+                    <li><a href="{{child.link}}">{{child.title}}</a></li>
+                  {% endfor %}
+                </div>
+              </ul>
+            {% else %}
+    					<a class="sidenav-titles" href="{{item.link}}">{{item.title}}</a>
+            {% endif %}
+  				</div>
+        {% endfor %}
+			</div>
+		</section>
+	</nav>
+</header>
