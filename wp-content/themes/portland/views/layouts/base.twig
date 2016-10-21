@@ -1,0 +1,15 @@
+{% include 'partials/header.twig' %}
+{% block head %}
+{% endblock %}
+</head>
+
+	<body class="{{body_class}}" data-template="base.twig">
+
+    {% include 'partials/menu.twig' %}
+
+		{% block content %}
+			Sorry, no content
+		{% endblock %}
+		{% include 'partials/footer.twig' %}
+	</body>
+</html>

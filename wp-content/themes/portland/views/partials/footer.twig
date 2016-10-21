@@ -1,0 +1,78 @@
+{% if not home %}
+  {% include 'partials/footerlayout.twig' %}
+{% endif %}
+
+<!-- ANGULAR -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script type="text/javascript" src="{{theme.link}}/scripts/angular-sanitize.min.js"></script>
+
+<!-- JQUERY -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{theme.link}}/vendors/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- TWITTER PLUGIN -->
+<script type="text/javascript" src="{{theme.link}}/vendors/bower_components/ngtweet/dist/ngtweet.min.js"></script>
+
+<!-- SRC DEPENDENCIES -->
+<script type="text/javascript" src="{{theme.link}}/scripts/app.js"></script>
+<script type="text/javascript" src="{{theme.link}}/vendors/bower_components/modernizr/modernizr-custom.js"></script>
+<script src="https://use.fontawesome.com/c71e81e3b9.js"></script>
+
+<!-- CONTROLLERS -->
+<script type="text/javascript" src="{{theme.link}}/controllers/navCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/newsCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/aboutCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/homeCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/contactCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/newstickerCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/widgetCtrl.js"></script>
+<script type="text/javascript" src="{{theme.link}}/controllers/workCtrl.js"></script>
+
+<!-- DIRECTIVES -->
+<script type="text/javascript" src="{{theme.link}}/directives/transition-directive.js"></script>
+<script type="text/javascript" src="{{theme.link}}/directives/video-directive.js"></script>
+
+<!-- FULLPAGE PLUGIN -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/jquery.fullPage.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/jquery.easings.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.2/vendors/scrolloverflow.min.js"></script>
+
+<!-- MAIL CHIMP -->
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type="text/javascript">
+  var loadApp = function(){
+    var body = document.getElementsByTagName('body')[0];
+    body.setAttribute('ng-app', 'portlandApp');
+    angular.bootstrap(body, ['ng', 'portlandApp']);
+  }
+
+  {% if home %}
+    $(function(){
+      var splashDiv = document.getElementById('splash');
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        splashDiv.innerHTML = '<img id="gifImage" src="{{gif}}"/>';
+        $('#gifImage').on('load',function() {
+          var element = document.getElementById("splash");
+          delete element;
+          loadApp();
+        });
+      }else{
+        splashDiv.innerHTML = '<video id="videoPortland" autoplay><source src="{{video}}" type="video/mp4">Your browser does not support the video tag.</video><div class="col-md-12 video-assets"><a onclick="removeVideo()" class="video--btn" href="#/home"><span>{{button_text}}</span></a></div>';
+      }
+      var videoelem = document.getElementById('videoPortland');
+        if (videoelem){
+          setTimeout(function(){
+            $('#videoPortland').on('ended',function(){
+                removeVideo();
+            });
+          }, 7000)
+        }
+    });
+  {% else %}
+    $(function(){
+      loadApp();
+    });
+  {% endif %}
+</script>
