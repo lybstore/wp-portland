@@ -1,0 +1,37 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<section id="About-Container">
+		<div class="about-hero-headings">
+		</div>
+		<div class="about-hero-image visible-xs hidden-sm hidden-md hidden-lg">
+			<img src="{{post.get_field('img_port').url}}">
+		</div>
+		<div class="about-hero-image hidden-xs visible-sm visible-md visible-lg">
+			<img src="{{post.get_field('img_land').url}}">
+		</div>
+		<section class="about-overlay-content">
+			<div class="about-banner">
+				<h2>{{post.heading|upper}}</h2>
+				{{post.main_content}}
+			</div>
+			<div class="about-inner-content">
+				{% for row in post.get_field('rows') %}
+					<div class="col-sm-12 column-block">
+						{% if row.acf_fc_layout == '2col' %}
+							{% include 'rows/' ~ row.acf_fc_layout ~ '.twig'
+								with {row:row, theme:theme} only %}
+						{% elseif row.acf_fc_layout == '1column' %}
+							{% include 'rows/' ~ row.acf_fc_layout ~ '.twig'
+								with {row:row, theme:theme} only %}
+						{% elseif row.acf_fc_layout == 'collage_ltlbr' %}
+							{% include 'rows/' ~ row.acf_fc_layout ~ '.twig'
+								with {row:row, theme:theme} only %}
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</section>
+
+	</section>
+{% endblock %}
