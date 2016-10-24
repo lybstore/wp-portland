@@ -1,11 +1,11 @@
 {% extends "layouts/base.twig" %}
 
 {% block content %}
-	<section id="frq-Section" class="news-gradient content" style="padding: 9em 1em 0;">
+	<section id="frq-Section" class="gradient content">
 		<div class="inner-content">
 			<!--- CONTAINER STARTS HERE -->
 			{% for post in posts %}
-				<div class="frq-accordion" role="tablist" aria-multiselectable="true">
+				<div class="accordion" role="tablist" aria-multiselectable="true">
 					<div class="panel panel-default">
 						<!-- PANEL STARTS HERE-->
 						{% if loop.index0 == 0 %}
@@ -20,8 +20,9 @@
 								<img src="{{theme.link}}/assets/FRQs/FRQ-Pointing-Right.png" alt="Arrow" />
 							</div>
 							<div class="panel-title">
-								<span data-toggle="collapse{{class}}" class="col-md-12">
-									<strong class="col-md-1">Q:&nbsp;</strong><p class="col-md-8">{{post.title}}</p>
+								<span data-toggle="collapse{{class}}">
+									<strong>Q:&nbsp;</strong>
+									<p>{{post.title}}</p>
 								</span>
 							</div>
 						</div><!-- PANEL HEADING ENDS HERE -->
@@ -30,16 +31,13 @@
 						{% else %}
 						<div id="collapse{{loop.index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{loop.index}}">
 						{% endif %}
-							<p>
-							<strong>A:&nbsp;</strong>
+							<p><strong>A:&nbsp;</strong></p>
 							{{post.content}}
-							<small><strong>{{post.get_field('name')}}</strong>, {{post.position}}</small>
-							</p>
+							<p><strong>{{post.get_field('name')}}</strong>, {{post.position}}</p>
 						</div>
 					</div>
 				</div><!-- PANEL ENDS HERE -->
 			{% endfor %}
-			<div style="height: 1px; margin-bottom: 0.8em;"></div>
 		</div>
 	</section>
 {% endblock %}
