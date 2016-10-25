@@ -1166,9 +1166,6 @@ body {
 @media only screen and (min-width: 1360px) {
   .accordion:first-child {
     padding-top: 90px; } }
-body {
-  background-color: black; }
-
 @media only screen and (min-width: 320px) {
   #Contact-Container section {
     background-color: #808080; }
@@ -1208,20 +1205,6 @@ body {
     width: 100% !important; }
   #Contact-Container iframe {
     margin-top: 75px !important; } }
-.sixteen-nine {
-  position: relative; }
-  .sixteen-nine:before {
-    display: block;
-    content: " ";
-    width: 100%;
-    padding-top: 56.25%; }
-  .sixteen-nine > .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-
 @media only screen and (min-width: 320px) {
   .modal-open {
     overflow: scroll !important; }
@@ -4131,148 +4114,126 @@ body {
     padding-top: 70px; }
     #About-Container .about-overlay-content {
       background-color: #4a4a49;
-      display: inline-block; }
+      display: inline-block;
+      margin: 0 auto;
+      width: 100%; }
       #About-Container .about-overlay-content .about-banner {
         background-color: #000;
         color: #fff;
         text-align: center;
-        padding: 1em;
-        font-size: 1em;
-        font-family: portland-book; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        #About-Container .about-overlay-content .about-banner {
-          padding: 2em 1em;
-          font-size: 1.5em; } }
-@media only screen and (min-width: 320px) {
+        padding: 2em 1em;
+        font-family: portland-book; }
         #About-Container .about-overlay-content .about-banner h2 {
           margin: 0;
-          font-size: 1.5em;
-          line-height: 1.1em;
+          font-size: 1.3em;
           margin-bottom: 0.5em;
-          font-family: portland-bold;
-          font-weight: normal; }
+          font-family: portland-bold; }
         #About-Container .about-overlay-content .about-banner p {
-          margin: 0; }
-    #About-Container .about-inner-content {
-      padding: 0.5em; }
-      #About-Container .about-inner-content .about-people--left {
-        position: absolute;
-        top: 0;
-        left: 0.2em;
-        margin: 0;
-        padding: 0;
-        padding: 1.5em;
-        line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--left h3 {
-          font-family: portland-bold;
-          font-size: 0.7em;
           margin: 0;
-          line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--left h4 {
-          margin: 0;
-          font-family: portland-book;
-          font-size: 0.6em;
-          line-height: 1.1em; }
-      #About-Container .about-inner-content .about-people--bottomright {
-        position: absolute;
-        bottom: 0;
-        right: 0.2em;
-        margin: 0;
-        padding: 0;
-        padding: 1.5em;
-        line-height: 1.1em;
-        text-align: right; }
-        #About-Container .about-inner-content .about-people--bottomright h3 {
-          font-family: portland-bold;
-          font-size: 0.7em;
-          margin: 0;
-          line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--bottomright h4 {
-          margin: 0;
-          font-family: portland-book;
-          font-size: 0.6em;
-          line-height: 1.1em; }
-      #About-Container .about-inner-content .about-people--right {
-        position: absolute;
-        top: 0;
-        right: 0.2em;
-        margin: 0;
-        padding: 0;
-        padding: 1.5em;
-        text-align: right;
-        line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--right h3 {
-          font-family: portland-bold;
-          font-size: 0.7em;
-          margin: 0;
-          line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--right h4 {
-          margin: 0;
-          font-family: portland-book;
-          font-size: 0.6em;
-          line-height: 1.1em; }
-      #About-Container .about-inner-content .about-people--bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 0.2em;
-        margin: 0;
-        padding: 0;
-        padding: 1.5em;
-        text-align: right;
-        line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--bottomleft h3 {
-          font-family: portland-bold;
-          font-size: 0.7em;
-          margin: 0;
-          line-height: 1.1em; }
-        #About-Container .about-inner-content .about-people--bottomleft h4 {
-          margin: 0;
-          font-family: portland-book;
-          font-size: 0.6em;
-          line-height: 1.1em; }
-      #About-Container .about-inner-content article {
-        padding: 0.5em !important;
-        position: relative; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        #About-Container .about-inner-content article .about-cropped {
-          height: 300px; }
-        #About-Container .about-inner-content article .about-cropped--large {
-          height: 430px;
-          max-height: 400px; } }
-@media only screen and (min-width: 320px) {
-        #About-Container .about-inner-content article .about-cropped--large {
-          min-height: 510px;
-          height: 100%; }
-        #About-Container .about-inner-content article .about-textbox--big {
-          align-items: center;
+          font-size: 0.9em; }
+      #About-Container .about-overlay-content .textbox-bg {
+        text-align: center;
+        position: relative;
+        background-color: #c8c8c9; }
+        #About-Container .about-overlay-content .textbox-bg:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 62.5%; }
+        #About-Container .about-overlay-content .textbox-bg > .content {
           position: absolute;
           top: 0;
           left: 0;
-          bottom: 0;
           right: 0;
-          text-align: center;
-          padding: 2.5em 5em !important; } }
-        @media only screen and (min-width: 320px) and (min-width: 1020px) {
-          #About-Container .about-inner-content article .about-textbox--big {
-            padding: 0em 7em; } }
+          bottom: 0; }
+      #About-Container .about-overlay-content .textbox-bg-fullWidth {
+        position: relative; }
+        #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 62.5%; }
+        #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 450px) {
+        #About-Container .about-overlay-content .textbox-bg-fullWidth {
+          position: relative; }
+          #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            padding-top: 95.83333%; }
+          #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; } }
 @media only screen and (min-width: 320px) {
-          #About-Container .about-inner-content article .about-textbox--big h2 {
-            margin: 0;
-            margin-bottom: 1em;
-            font-size: 2em; }
-          #About-Container .about-inner-content article .about-textbox--big p {
-            font-family: portland-book;
-            font-size: 1.5em;
-            line-height: 1.1em; } }
-          @media only screen and (min-width: 320px) and (max-width: 1020px) {
-            #About-Container .about-inner-content article .about-textbox--big p {
-              font-size: 1em; } }
+      #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
+        position: relative; }
+        #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 25%; }
+        #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      #About-Container .about-overlay-content .textbox-bg-blck {
+        background-color: #000; }
+      #About-Container .about-overlay-content .about-textbox {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 1em;
+        color: #fff;
+        font-family: portland-bold; } }
+      @media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 767px) {
+        #About-Container .about-overlay-content .about-textbox {
+          padding-top: 6em; } }
 @media only screen and (min-width: 320px) {
+        #About-Container .about-overlay-content .about-textbox h2 {
+          font-size: 1.4em;
+          margin-top: 5px;
+          margin-bottom: 5px; } }
+        @media only screen and (min-width: 320px) and (min-width: 470px) and (max-width: 767px) {
+          #About-Container .about-overlay-content .about-textbox h2 {
+            font-size: 1.6em; } }
+@media only screen and (min-width: 320px) {
+        #About-Container .about-overlay-content .about-textbox p {
+          font-family: portland-book;
+          font-size: 1em; } }
+        @media only screen and (min-width: 320px) and (min-width: 470px) and (max-width: 767px) {
+          #About-Container .about-overlay-content .about-textbox p {
+            font-size: 1.1em; } }
+@media only screen and (min-width: 320px) {
+      #About-Container .about-overlay-content .textbox-bg--white {
+        background-color: #fff; }
+        #About-Container .about-overlay-content .textbox-bg--white .about-textbox {
+          color: #000; }
+      #About-Container .about-overlay-content .textbox-bg-fullWidth .about-textbox {
+        color: #333; } }
+      @media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 767px) {
+        #About-Container .about-overlay-content .textbox-bg-fullWidth .about-textbox {
+          padding-top: 4em; } }
+@media only screen and (min-width: 320px) {
+    #About-Container .about-inner-content {
+      padding: 0.5em;
+      max-width: 1815px;
+      margin: 0 auto;
+      width: 100%; }
+      #About-Container .about-inner-content article {
+        padding: 0.5em !important;
+        position: relative; }
         #About-Container .about-inner-content article .future-ready-box {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
           text-align: center;
           position: absolute;
           top: 0;
@@ -4295,32 +4256,6 @@ body {
               font-size: 1em;
               padding: 0em; } }
 @media only screen and (min-width: 320px) {
-        #About-Container .about-inner-content article .about-textbox {
-          position: absolute;
-          text-align: center;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          padding: 3.5em;
-          height: 100%; }
-          #About-Container .about-inner-content article .about-textbox h2 {
-            margin: 0;
-            font-size: 1.5em;
-            line-height: 1.1em;
-            margin-bottom: 0.5em;
-            font-family: portland-bold;
-            font-weight: normal; }
-          #About-Container .about-inner-content article .about-textbox p {
-            text-align: center;
-            font-family: portland-book;
-            font-size: 1em;
-            margin-bottom: 0; }
-          #About-Container .about-inner-content article .about-textbox .heading-small {
-            font-size: 1em; }
-          #About-Container .about-inner-content article .about-textbox .heading-small--margin {
-            margin-top: 3em; }
-          #About-Container .about-inner-content article .about-textbox .commercial-textbox {
-            margin-top: 1em; }
       #About-Container .about-inner-content .column-block {
         padding-left: 0em;
         padding-right: 0em; }
@@ -4331,17 +4266,106 @@ body {
         #About-Container .about-inner-content .grid-tile:last-child {
           padding-right: 0; }
       #About-Container .about-inner-content .spacing-bottom {
-        margin-bottom: 0.5em; } }
-@media only screen and (min-width: 768px) and (max-width: 1200px) and (max-width: 850px) {
-  #About-Container .about-inner-content article .about-textbox {
-    padding: 1.9em; } }
-
+        margin-bottom: 0.5em; }
+    #About-Container .textbox-bg-fullWidth-thin .future-ready-box {
+      padding-top: 2em !important;
+      padding-bottom: 2em !important; } }
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .heading-small--margin {
-    margin-top: 0em !important; } }
-@media only screen and (min-width: 1200px) {
+  #About-Container .about-overlay-content .textbox-bg-fullWidth {
+    position: relative; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 25.83333%; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
+    position: relative;
+    padding: 3.5em; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 8.33333%; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    + #About-Container .about-overlay-content .textbox-bg-fullWidth-thin .about-inner-content article .future-ready-box {
+      padding: 2em 4em;
+      position: relative; }
+  #About-Container .about-overlay-content .about-banner h2 {
+    font-size: 1.2em; }
+  #About-Container .about-overlay-content .about-banner p {
+    font-size: 1em; }
   #About-Container .about-inner-content article .about-textbox {
-    padding: 8em 3.5em; } }
+    padding-left: 1.5em;
+    padding-right: 1.5em; } }
+  @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 870px) and (max-width: 1000px) {
+    #About-Container .about-inner-content article .about-textbox {
+      padding-top: 2.5em; } }
+  @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 870px) {
+    #About-Container .about-inner-content article .about-textbox {
+      padding-top: 2.5em; } }
+  @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 1000px) {
+    #About-Container .about-inner-content article .about-textbox h2 {
+      font-size: 1.8em; } }
+  @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 1000px) {
+    #About-Container .about-inner-content article .about-textbox p {
+      font-size: 1.1em; } }
+
+@media only screen and (min-width: 1200px) {
+  #About-Container .about-overlay-content .textbox-bg-fullWidth {
+    position: relative; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 29.16667%; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
+    position: relative; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 16.66667%; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin .about-inner-content article .future-ready-box {
+      padding: 2.5em 4em; }
+  #About-Container .about-overlay-content .about-banner h2 {
+    font-size: 1.4em; }
+  #About-Container .about-overlay-content .about-banner p {
+    font-size: 1.2em; }
+  #About-Container .about-inner-content article .about-textbox {
+    padding: 5.5em 2em; } }
+  @media only screen and (min-width: 1200px) and (min-width: 1300px) {
+    #About-Container .about-inner-content article .about-textbox {
+      padding-top: 10em; } }
+  @media only screen and (min-width: 1200px) and (min-width: 1000px) {
+    #About-Container .about-inner-content article .about-textbox h2 {
+      font-size: 2em; } }
+  @media only screen and (min-width: 1200px) and (min-width: 1000px) {
+    #About-Container .about-inner-content article .about-textbox p {
+      font-size: 1.1em; } }
+
 @media only screen and (min-width: 320px) {
   #Amuse-Container {
     background-color: #4a4a49; }
