@@ -47,7 +47,14 @@ class WoodChippr extends TimberSite {
     include_once 'inc/post_type/news.php';
 
 		/* CHIPPR custom fields */
-    include_once 'inc/acf/acf.php';
+		include_once 'inc/acf/acf.php';
+		include_once 'inc/acf/options-pages.php';
+
+		/* CHIPPR Dependency management */
+		include_once 'inc/dependencies/dependencies.php';
+
+		/* CHIPPR Scheduling */
+		include_once 'inc/functions/scheduling.php';
 
 		parent::__construct();
 	}
@@ -69,6 +76,7 @@ class WoodChippr extends TimberSite {
 		$context['mainmenu'] = new TimberMenu('main-menu');
 
 		$context["analyticscode"] = "MISSING_TRACKING_CODE";
+		$context['homepage'] = get_field('homepage', 'option');
 
 	  return $context;
 	}

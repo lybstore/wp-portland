@@ -1,12 +1,12 @@
 {
-    "key": "group_5809128768ae9",
-    "title": "News Fields",
+    "key": "group_58112bab21f78",
+    "title": "Homepage Fields",
     "fields": [
         {
-            "key": "field_580912f29fbaa",
-            "label": "video",
-            "name": "video",
-            "type": "file",
+            "key": "field_58112bb21209a",
+            "label": "Newsticker Shortcode",
+            "name": "newsticker",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,19 +15,19 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "post"
+                "value": "page-templates\/home.php"
             }
         ]
     ],
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1477512970
+    "modified": 1477520350
 }
