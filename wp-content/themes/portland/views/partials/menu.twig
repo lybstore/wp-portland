@@ -12,7 +12,7 @@
   				<div class="sidenav-padding">
             {% if item.children %}
     					<a ng-click="workToggle()" class="sidenav-titles cursor">{{item.title}}</a>
-              <ul class="no-margin nav-submenu">
+              <ul class="nav-submenu">
                 <div id="myList" class="hiddenMenu" ng-class="{isHidden: toggleMenu}">
                   {% for child in item.children %}
                     <li><a href="{{child.link}}">{{child.title}}</a></li>
