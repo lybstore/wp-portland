@@ -59,7 +59,7 @@
           loadApp();
         });
       }else{
-        splashDiv.innerHTML = '<video id="videoPortland" autoplay><source src="{{video}}" type="video/mp4">Your browser does not support the video tag.</video><div class="col-md-12 video-assets"><a onclick="removeVideo()" class="video--btn" href="#/home"><span>{{button_text}}</span></a></div>';
+        splashDiv.innerHTML = '<video id="videoPortland" autoplay><source src="{{video}}" type="video/mp4">Your browser does not support the video tag.</video><div class="col-md-12 video-assets"><a onclick="removeVideo()" class="video--btn" href="{{homepage}}"><span>{{button_text}}</span></a></div>';
       }
       var videoelem = document.getElementById('videoPortland');
         if (videoelem){
@@ -76,3 +76,4 @@
     });
   {% endif %}
 </script>
+{{wp_footer}}

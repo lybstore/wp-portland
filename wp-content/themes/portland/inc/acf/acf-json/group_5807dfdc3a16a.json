@@ -1,6 +1,6 @@
 {
     "key": "group_5807dfdc3a16a",
-    "title": "Homepage Fields",
+    "title": "Splashpage Fields",
     "fields": [
         {
             "key": "field_5807dfea30f70",
@@ -84,5 +84,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1476911304
+    "modified": 1477520256
 }
