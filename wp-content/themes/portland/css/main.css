@@ -1,6 +1,3 @@
-body {
-  padding: 0 !important; }
-
 @media only screen and (min-width: 320px) {
   .mobile-display {
     display: block; }
@@ -326,10 +323,12 @@ html.fp-enabled,
   width: 100%;
   display: inline-block; }
 
-main {
-  margin-top: -20px; }
-
 @media only screen and (min-width: 320px) {
+  #HomeGrid .buffer {
+    height: 70px;
+    width: 100%;
+    display: block;
+    float: left; }
   #HomeGrid .grid-headings {
     margin: 0;
     position: absolute;
@@ -398,7 +397,6 @@ main {
   #HomeGrid .grid-block-hidden {
     color: #fff;
     opacity: 0;
-    position: absolute;
     border-radius: 25px;
     position: absolute;
     top: 0;
@@ -424,9 +422,6 @@ main {
 @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1110px) {
   #HomeGrid .buffer {
     height: 70px; } }
-@media only screen and (min-width: 768px) and (min-width: 1200px) {
-  #HomeGrid .buffer {
-    height: 140px; } }
 @media only screen and (min-width: 768px) {
   #HomeGrid .grid-headings h2 {
     font-size: 1.20em; } }
@@ -480,7 +475,6 @@ main {
     opacity: 0;
     position: absolute;
     border-radius: 25px;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -644,16 +638,12 @@ a {
 
 body, html {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  text-rendering: geometricPrecision; }
-
-.margin-top-zero {
-  margin-top: 0 !important; }
-
-.tile30 {
-  border-radius: 30px; }
+  text-rendering: geometricPrecision;
+  background-color: #000; }
 
 .item-list {
   display: none; }
@@ -699,33 +689,6 @@ body, html {
 .text-left {
   text-align: left; }
 
-.cursor {
-  cursor: pointer; }
-
-.relative {
-  position: relative; }
-
-.no-padding {
-  padding: 0; }
-
-.no-margin {
-  margin: 0; }
-
-.no-background {
-  background: none; }
-
-.float-right {
-  float: right; }
-
-.float-left {
-  float: left; }
-
-.absolute-center {
-  left: 50%;
-  right: 50%;
-  position: absolute;
-  bottom: 0; }
-
 .absolute-wrapper {
   position: absolute;
   top: 0;
@@ -744,9 +707,9 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 900;
-    height: 75px; }
+    z-index: 900; }
     header nav {
+      padding-bottom: 0.7em;
       padding-top: 0.5em; }
       header nav ul {
         padding: 0; }
@@ -797,12 +760,14 @@ img {
           transition: all 0.3s ease; }
       header .sidenav-padding:first-child {
         margin-top: 0px; }
-    header .nav-submenu li {
-      line-height: 15px; }
-    header .nav-submenu li a {
-      font-size: 0.8em;
-      font-family: portland-book;
-      margin: 8px 25px; }
+    header .nav-submenu {
+      margin: 0; }
+      header .nav-submenu li {
+        line-height: 15px; }
+      header .nav-submenu li a {
+        font-size: 0.8em;
+        font-family: portland-book;
+        margin: 8px 25px; }
     header .hiddenMenu {
       position: relative;
       height: 0px;
@@ -887,9 +852,6 @@ img {
 
 .tile2 {
   border-radius: 30px; }
-
-body {
-  background-color: black !important; }
 
 .grid-block--yellow {
   background-color: #FFD002; }
@@ -1025,6 +987,9 @@ body {
   animation-iteration-count: infinite; }
 
 @media only screen and (min-width: 320px) {
+  .gradient {
+    background: linear-gradient(0deg, #4a4a49 30%, lightgrey); }
+
   .content {
     padding: 9em 1em 2em; }
 
@@ -1095,7 +1060,7 @@ body {
       max-width: 365px; } }
   @media only screen and (min-width: 320px) and (max-width: 767px) {
     .accordion-panel-title {
-      margin-left: 0.9em; } }
+      margin-left: 0em; } }
 @media only screen and (min-width: 320px) {
     .accordion-panel-title span strong {
       font-size: 1.2em;
@@ -4111,7 +4076,7 @@ body {
       margin-bottom: 0; } }
 @media only screen and (min-width: 320px) {
   #About-Container {
-    padding-top: 70px; }
+    padding-top: 53px; }
     #About-Container .about-overlay-content {
       background-color: #4a4a49;
       display: inline-block;
