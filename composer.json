@@ -14,7 +14,7 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/imsanity": "*",
     "wpackagist-plugin/intuitive-custom-post-order": "*",
-    "abraham/twitteroauth": "*"
+    "corbanb/freebird-php":"*"
   },
   "extra": {
     "wordpress-install-dir": "wp",
