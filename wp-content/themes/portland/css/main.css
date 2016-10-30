@@ -817,12 +817,6 @@ img {
 .red {
   color: red; }
 
-.black {
-  color: black !important; }
-
-.white {
-  color: #fff; }
-
 .base-color {
   color: white !important; }
 
@@ -1082,7 +1076,7 @@ img {
       margin-right: 1em; }
 
   .panel-news {
-    max-width: 252px;
+    max-width: 184px;
     width: 100%; } }
   @media only screen and (min-width: 320px) and (min-width: 475px) and (max-width: 580px) {
     .panel-news {
@@ -1170,6 +1164,114 @@ img {
     width: 100% !important; }
   #Contact-Container iframe {
     margin-top: 75px !important; } }
+@media only screen and (min-width: 320px) {
+  .buffer {
+    display: block;
+    height: 147px;
+    width: 100%;
+    background: linear-gradient(rgba(69, 69, 69, 0.75), #434343); }
+
+  .buffer-75 {
+    height: 72px; }
+
+  section .scroll {
+    overflow: scroll; }
+  section .work-full-bg {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(#1f1f1f, #454545 56%, #1f1f1f);
+    background-position: 40% 43%;
+    background-repeat: no-repeat; }
+  section .work-intro-text {
+    width: 100%;
+    font-family: portland-book; }
+  section .work-content article {
+    color: #fff;
+    font-family: portland-book;
+    padding-left: 1.5em;
+    padding-right: 1.5em; }
+    section .work-content article h2 {
+      font-family: portland-bold;
+      text-transform: uppercase;
+      font-size: 1.6em;
+      max-width: 300px; }
+    section .work-content article h3 {
+      font-size: 1em;
+      font-family: portland-medium;
+      margin-top: 10px; }
+    section .work-content article p {
+      font-size: 0.95em;
+      margin-bottom: 7px; }
+  section .work-content:nth-child(2) {
+    float: right; }
+  section .fp-tableCell .work-headings {
+    color: white;
+    padding: 1.5em; }
+    section .fp-tableCell .work-headings .work-subheading {
+      font-size: 1.2em;
+      font-family: portland-book;
+      line-height: 1;
+      margin-top: 1.1em; }
+    section .fp-tableCell .work-headings p {
+      font-family: portland-book;
+      font-size: 1em;
+      margin-top: 0.5em; }
+    section .fp-tableCell .work-headings h2 {
+      font-size: 1.8em;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      font-family: portland-bold; }
+    section .fp-tableCell .work-headings .heading--bold {
+      font-size: 1em !important;
+      font-family: portland-medium !important; }
+
+  .playpause {
+    background-image: url("/../assets/videos/Play-Controller-White.svg");
+    background-repeat: no-repeat;
+    width: 13%;
+    height: 13%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    background-size: contain;
+    background-position: center;
+    z-index: 90;
+    cursor: pointer; } }
+@media only screen and (min-width: 768px) {
+  .slide section .fp-tableCell .work-headings {
+    position: absolute;
+    left: 0; }
+    .slide section .fp-tableCell .work-headings h2 {
+      font-size: 2em; }
+    .slide section .fp-tableCell .work-headings p {
+      margin-top: 0.8em;
+      margin-bottom: 0.8em;
+      line-height: 1.1em;
+      font-size: 1em; }
+  .slide section .fp-tableCell .work-content {
+    width: 50%;
+    height: 100%; }
+  .slide section .fp-tableCell .work-intro-text {
+    font-size: 1.5em; } }
+@media only screen and (min-width: 1360px) {
+  .slide section .fp-tableCell .work-content {
+    width: 50%; }
+    .slide section .fp-tableCell .work-content h2 {
+      padding: 0em !important; }
+  .slide section .fp-tableCell .work-headings h2 {
+    font-size: 2.5em; }
+  .slide section .fp-tableCell .work-headings p {
+    font-size: 1.2em; }
+
+  .playpause {
+    display: block; } }
 @media only screen and (min-width: 320px) {
   .modal-open {
     overflow: scroll !important; }
@@ -3585,134 +3687,97 @@ img {
       margin-top: 0;
       margin-bottom: 0; } }
 @media only screen and (min-width: 320px) {
-  #Luton-Container {
-    background-color: #4a4a49; }
-    #Luton-Container .luton-hero-container {
-      position: relative; }
-      #Luton-Container .luton-hero-container .luton-hero-headings {
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: #fff;
-        padding: 0em 0em 0em 1.45em;
-        top: 90px; }
-        #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-          margin: 0;
-          padding: 0;
-          text-transform: uppercase;
-          font-family: portland-bold;
-          font-weight: normal;
-          font-size: 2em;
-          line-height: 1;
-          transition: font-size 0.3s; } }
-        @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-            font-size: 3em; } }
-@media only screen and (min-width: 320px) {
-        #Luton-Container .luton-hero-container .luton-hero-headings p {
-          margin: 0;
-          margin-top: 1em;
-          padding: 0;
-          font-family: portland-book;
-          font-size: 0.8em;
-          line-height: 1;
-          transition: font-size 0.3s; } }
-        @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Luton-Container .luton-hero-container .luton-hero-headings p {
-            font-size: 1.3em; } }
-@media only screen and (min-width: 320px) {
-      #Luton-Container .luton-hero-container .luton-hero-image {
-        padding-top: 74px; }
+  .work-container {
+    padding-top: 3.8em; }
 
-  .luton-overlay-content {
+  .hero-container {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden; }
+    .hero-container .hero-headings {
+      position: absolute;
+      top: 20px;
+      left: 1.45em;
+      color: #fff;
+      line-height: 1; }
+      .hero-container .hero-headings h2 {
+        text-transform: uppercase;
+        font-family: portland-bold;
+        font-size: 1.5em;
+        transition: font-size 0.3s;
+        margin-top: 5px; } }
+      @media only screen and (min-width: 320px) and (min-width: 500px) {
+        .hero-container .hero-headings h2 {
+          font-size: 1.8em; } }
+@media only screen and (min-width: 320px) {
+      .hero-container .hero-headings p {
+        margin-top: 1em;
+        font-family: portland-book;
+        font-size: 0.9em;
+        transition: font-size 0.3s; } }
+      @media only screen and (min-width: 320px) and (min-width: 500px) {
+        .hero-container .hero-headings p {
+          font-size: 1.3em; } }
+
+@media only screen and (min-width: 320px) {
+  .overlay-content {
     background-color: rgba(26, 26, 26, 0.1); }
-    .luton-overlay-content .luton-banner {
-      margin: 0;
-      padding: 1em;
-      background-color: #000; }
-      .luton-overlay-content .luton-banner p {
+    .overlay-content .overlay-banner {
+      max-width: 1815px;
+      margin: 0 auto;
+      padding: 1em; }
+      .overlay-content .overlay-banner p {
         text-align: center;
         color: #fff;
-        background-color: #000;
         font-family: portland-book;
-        margin: 0; }
-    .luton-overlay-content .luton-inner-content {
-      background-color: rgba(26, 26, 26, 0.1);
-      display: inline-block;
-      padding: 1em; }
-      .luton-overlay-content .luton-inner-content article {
-        padding: 0.5em 0em; } }
+        margin: 0;
+        font-size: 0.8em; }
+    .overlay-content .inner-content {
+      max-width: 1815px;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: #4a4a49;
+      display: table; }
+      .overlay-content .inner-content div {
+        padding: 0.5em; } }
       @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-        .luton-overlay-content .luton-inner-content article .luton-crop {
+        .overlay-content .inner-content div .luton-crop {
           height: 100%;
           max-height: 200px; } }
 @media only screen and (min-width: 320px) {
-      .luton-overlay-content .luton-inner-content video {
-        width: 100%; }
-      .luton-overlay-content .luton-inner-content .luton-week-summary {
-        background-color: #ffd100;
-        margin: 0;
-        padding: 2em;
+      .overlay-content .inner-content .textbox-bg {
+        position: relative;
+        background-color: #000;
         border-radius: 25px;
         text-align: center;
-        color: #fff;
-        font-family: portland-book;
-        font-size: 1.3em;
-        line-height: 1; }
-      .luton-overlay-content .luton-inner-content .column-block {
-        padding: 0em; }
-      .luton-overlay-content .luton-inner-content .spacing-bottom {
-        margin-bottom: 1em; }
-      .luton-overlay-content .luton-inner-content .luton-abs-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        padding: 1.5em;
-        color: #000;
-        font-family: portland-book;
-        font-size: 1.5em;
-        line-height: 1.1em;
-        text-transform: uppercase;
-        text-align: left;
         color: #fff; }
-      .luton-overlay-content .luton-inner-content .abs-text-right {
-        bottom: 0 !important;
-        right: 0 !important;
-        text-align: right;
-        color: #fff; }
-      .luton-overlay-content .luton-inner-content .luton-flex-text {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 4em;
-        font-family: portland-book;
-        color: #fff;
-        font-size: 1em;
-        line-height: 1.1em;
-        border-radius: 25px; }
-        .luton-overlay-content .luton-inner-content .luton-flex-text:nth-child(2) {
-          padding: 2em; }
-      .luton-overlay-content .luton-inner-content .luton-more-text {
-        font-size: 0.8em;
-        margin-top: -0.5em; } }
-      @media only screen and (min-width: 320px) and (min-width: 768px) {
-        .luton-overlay-content .luton-inner-content .luton-more-text {
-          margin-top: 2em; } }
+        .overlay-content .inner-content .textbox-bg:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 70.83333%; }
+        .overlay-content .inner-content .textbox-bg > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+        .overlay-content .inner-content .textbox-bg p {
+          position: absolute;
+          top: 0em;
+          left: 0em;
+          padding: 3em 1.5em; } }
+        @media only screen and (min-width: 320px) and (min-width: 992px) and (max-width: 1000px) {
+          .overlay-content .inner-content .textbox-bg p {
+            padding: 2.2em 1.5em; } }
+        @media only screen and (min-width: 320px) and (min-width: 1136px) and (max-width: 1400px) {
+          .overlay-content .inner-content .textbox-bg p {
+            padding: 4.5em 1.5em; } }
+        @media only screen and (min-width: 320px) and (min-width: 1400px) {
+          .overlay-content .inner-content .textbox-bg p {
+            padding: 6em 1.5em; } }
 @media only screen and (min-width: 320px) {
-      .luton-overlay-content .luton-inner-content .luton-more {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column; }
-        .luton-overlay-content .luton-inner-content .luton-more button {
+        .overlay-content .inner-content .textbox-bg button {
           padding: 0;
           border: none;
           background: none;
@@ -3721,359 +3786,27 @@ img {
           font-size: 1em;
           transition: all 0.3s ease-in-out;
           bottom: 0; }
-          .luton-overlay-content .luton-inner-content .luton-more button:hover {
+          .overlay-content .inner-content .textbox-bg button:hover {
             color: #fff;
             font-size: 1.1em; }
-        .luton-overlay-content .luton-inner-content .luton-more p {
-          font-size: 1em;
-          line-height: 1.1em;
-          padding: 0em 0em; }
-      .luton-overlay-content .luton-inner-content #carousel-example-generic .item {
-        margin: 0em 0.5em; }
-      .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators {
-        position: absolute;
-        top: auto;
-        bottom: 25px !important;
-        left: 46%; }
-        .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators li {
-          width: 10px !important;
-          height: 10px !important;
-          margin: 0 5px !important;
-          border: none !important; }
-          .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators li:active {
-            border: none; }
-        .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators .active {
-          width: 10px;
-          height: 10px;
-          margin-left: 5px;
-          border: none;
-          margin-top: 0;
-          margin-bottom: 0; } }
-@media only screen and (min-width: 320px) and (min-width: 768px) {
-  #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-    font-size: 3.5em;
-    line-height: 1; }
-  #Luton-Container .luton-hero-container .luton-hero-headings p {
-    font-size: 1.3em; }
-
-  .luton-overlay-content .luton-banner {
-    padding: 2em 7em; }
-    .luton-overlay-content .luton-banner p {
-      font-size: 1.5em; }
-  .luton-overlay-content .luton-inner-content {
-    padding-top: 1em; }
-    .luton-overlay-content .luton-inner-content article {
-      padding: 0.5em 0em; }
-    .luton-overlay-content .luton-inner-content video {
-      width: 100%; }
-    .luton-overlay-content .luton-inner-content .luton-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .luton-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .luton-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media only screen and (min-width: 320px) and (min-width: 1200px) {
-  #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-    font-size: 4em;
-    line-height: 1; }
-  #Luton-Container .luton-hero-container .luton-hero-headings p {
-    font-size: 1.5em; }
-
-  .luton-overlay-content .luton-banner {
-    padding: 3em 20em; }
-    .luton-overlay-content .luton-banner p {
-      font-size: 1.5em; }
-  .luton-overlay-content .luton-inner-content {
-    padding: 1em 5em; }
-    .luton-overlay-content .luton-inner-content article {
-      padding: 0.5em 0.5em; }
-    .luton-overlay-content .luton-inner-content video {
-      width: 100%; }
-    .luton-overlay-content .luton-inner-content .gcsc-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .luton-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .luton-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media only screen and (min-width: 320px) {
-  #Luton-Container {
-    background-color: #4a4a49; }
-    #Luton-Container .luton-hero-container {
-      position: relative; }
-      #Luton-Container .luton-hero-container .luton-hero-headings {
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: #fff;
-        padding: 0em 0em 0em 1.45em;
-        top: 90px; }
-        #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-          margin: 0;
-          padding: 0;
-          text-transform: uppercase;
-          font-family: portland-bold;
-          font-weight: normal;
-          font-size: 2em;
-          line-height: 1;
-          transition: font-size 0.3s; } }
-        @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-            font-size: 3em; } }
-@media only screen and (min-width: 320px) {
-        #Luton-Container .luton-hero-container .luton-hero-headings p {
-          margin: 0;
-          margin-top: 1em;
-          padding: 0;
-          font-family: portland-book;
-          font-size: 0.8em;
-          line-height: 1;
-          transition: font-size 0.3s; } }
-        @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Luton-Container .luton-hero-container .luton-hero-headings p {
-            font-size: 1.3em; } }
-@media only screen and (min-width: 320px) {
-      #Luton-Container .luton-hero-container .luton-hero-image {
-        padding-top: 74px; }
-
-  .luton-overlay-content {
-    background-color: rgba(26, 26, 26, 0.1); }
-    .luton-overlay-content .luton-banner {
-      margin: 0;
-      padding: 1em;
-      background-color: #000; }
-      .luton-overlay-content .luton-banner p {
-        text-align: center;
-        color: #fff;
-        background-color: #000;
-        font-family: portland-book;
-        margin: 0; }
-    .luton-overlay-content .luton-inner-content {
-      background-color: rgba(26, 26, 26, 0.1);
-      display: inline-block;
-      padding: 1em; }
-      .luton-overlay-content .luton-inner-content article {
-        padding: 0.5em 0em; } }
-      @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-        .luton-overlay-content .luton-inner-content article .luton-crop {
-          height: 100%;
-          max-height: 200px; } }
-@media only screen and (min-width: 320px) {
-      .luton-overlay-content .luton-inner-content video {
-        width: 100%; }
-      .luton-overlay-content .luton-inner-content .luton-week-summary {
-        background-color: #ffd100;
-        margin: 0;
-        padding: 2em;
-        border-radius: 25px;
-        text-align: center;
-        color: #fff;
-        font-family: portland-book;
-        font-size: 1.3em;
-        line-height: 1; }
-      .luton-overlay-content .luton-inner-content .column-block {
+      .overlay-content .inner-content .column-block {
         padding: 0em; }
-      .luton-overlay-content .luton-inner-content .spacing-bottom {
-        margin-bottom: 1em; }
-      .luton-overlay-content .luton-inner-content .luton-abs-text {
+      .overlay-content .inner-content .curve-container .curve-text {
         position: absolute;
         top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
         padding: 1.5em;
-        color: #000;
         font-family: portland-book;
         font-size: 1.5em;
         line-height: 1.1em;
         text-transform: uppercase;
-        text-align: left;
         color: #fff; }
-      .luton-overlay-content .luton-inner-content .abs-text-right {
-        bottom: 0 !important;
-        right: 0 !important;
-        text-align: right;
-        color: #fff; }
-      .luton-overlay-content .luton-inner-content .luton-flex-text {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 4em;
-        font-family: portland-book;
-        color: #fff;
-        font-size: 1em;
-        line-height: 1.1em;
-        border-radius: 25px; }
-        .luton-overlay-content .luton-inner-content .luton-flex-text:nth-child(2) {
-          padding: 2em; }
-      .luton-overlay-content .luton-inner-content .luton-more-text {
-        font-size: 0.8em;
-        margin-top: -0.5em; } }
-      @media only screen and (min-width: 320px) and (min-width: 768px) {
-        .luton-overlay-content .luton-inner-content .luton-more-text {
-          margin-top: 2em; } }
-@media only screen and (min-width: 320px) {
-      .luton-overlay-content .luton-inner-content .luton-more {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column; }
-        .luton-overlay-content .luton-inner-content .luton-more button {
-          padding: 0;
-          border: none;
-          background: none;
-          font-family: portland-bold;
-          text-transform: uppercase;
-          font-size: 1em;
-          transition: all 0.3s ease-in-out;
-          bottom: 0; }
-          .luton-overlay-content .luton-inner-content .luton-more button:hover {
-            color: #fff;
-            font-size: 1.1em; }
-        .luton-overlay-content .luton-inner-content .luton-more p {
-          font-size: 1em;
-          line-height: 1.1em;
-          padding: 0em 0em; }
-      .luton-overlay-content .luton-inner-content #carousel-example-generic .item {
-        margin: 0em 0.5em; }
-      .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators {
-        position: absolute;
-        top: auto;
-        bottom: 25px !important;
-        left: 46%; }
-        .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators li {
-          width: 10px !important;
-          height: 10px !important;
-          margin: 0 5px !important;
-          border: none !important; }
-          .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators li:active {
-            border: none; }
-        .luton-overlay-content .luton-inner-content #carousel-example-generic .carousel-indicators .active {
-          width: 10px;
-          height: 10px;
-          margin-left: 5px;
-          border: none;
-          margin-top: 0;
-          margin-bottom: 0; } }
-@media only screen and (min-width: 320px) and (min-width: 768px) {
-  #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-    font-size: 3.5em;
-    line-height: 1; }
-  #Luton-Container .luton-hero-container .luton-hero-headings p {
-    font-size: 1.3em; }
-
-  .luton-overlay-content .luton-banner {
-    padding: 2em 7em; }
-    .luton-overlay-content .luton-banner p {
-      font-size: 1.5em; }
-  .luton-overlay-content .luton-inner-content {
-    padding-top: 1em; }
-    .luton-overlay-content .luton-inner-content article {
-      padding: 0.5em 0em; }
-    .luton-overlay-content .luton-inner-content video {
-      width: 100%; }
-    .luton-overlay-content .luton-inner-content .luton-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .luton-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .luton-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media only screen and (min-width: 320px) and (min-width: 1200px) {
-  #Luton-Container .luton-hero-container .luton-hero-headings h2 {
-    font-size: 4em;
-    line-height: 1; }
-  #Luton-Container .luton-hero-container .luton-hero-headings p {
-    font-size: 1.5em; }
-
-  .luton-overlay-content .luton-banner {
-    padding: 3em 20em; }
-    .luton-overlay-content .luton-banner p {
-      font-size: 1.5em; }
-  .luton-overlay-content .luton-inner-content {
-    padding: 1em 5em; }
-    .luton-overlay-content .luton-inner-content article {
-      padding: 0.5em 0.5em; }
-    .luton-overlay-content .luton-inner-content video {
-      width: 100%; }
-    .luton-overlay-content .luton-inner-content .gcsc-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .luton-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .luton-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .luton-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
+      .overlay-content .inner-content .curve-container img {
+        border-radius: 25px; } }
+@media only screen and (min-width: 768px) {
+  .overlay-content .overlay-banner {
+    padding: 2em 8em; }
+    .overlay-content .overlay-banner p {
+      font-size: 1.3em; } }
 @media only screen and (min-width: 320px) {
   #About-Container {
     padding-top: 53px; }
