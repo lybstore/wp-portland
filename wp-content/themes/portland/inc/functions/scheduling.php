@@ -1,26 +1,23 @@
 <?php
-use Abraham\TwitterOAuth\TwitterOAuth;
+
+require_once ABSPATH."../vendor/autoload.php";
+
 
 function update_twittercache(){
 
   $consumer_key = "aumg8vl0dZtPSLBOJXUpokWjK"; //get_field('twitter_consumer_key', 'option');
   $consumer_secret = "pbuDhgyFCU7CKDQtLl50OniuNRoPwsaP5FCetVowKWfZxWce0o";
   //get_field('twitter_consumer_secret', 'option');
-  $access_token = "202116639-njzwgoET5fxeRzWbxHUbT05DTg0TlEqViUrPEf6G";
-  //get_field('twitter_access_token', 'option');
-  $access_token_secret = "q3CWvB6H4Rqyb9aQASF28QJxwreIiu6YJqz5eErY8exTj"; //get_field('twitter_access_token_secret', 'option');
 
-  $connection = new TwitterOAuth($consumer_key, $consumer_secret, $access_token, $access_token_secret);
-  $response = $connection->get("account/verify_credentials");
-  $response = $connection->get("statuses/user_timeline", array("count" => 25, "exclude_replies" => true, "screen_name" => "PortlandDesign"));
-  var_dump($response);
+  $client = new Freebird\Services\freebird\Client();
+  $client->init_bearer_token($consumer_key, $consumer_secret);
+  $response = $client->api_request('statuses/user_timeline.json', array('screen_name' => 'PortlandDesign', 'count' => 1));
+
   if(!file_exists(get_stylesheet_directory() .'/inc/twittercache/results.json')){
     touch(get_stylesheet_directory() .'/inc/twittercache/results.json');
   }
   file_put_contents(get_stylesheet_directory() .'/inc/twittercache/results.json', json_encode($response));
 }
-
-// update_twittercache();
 
 function add_every_ten_mins( $schedules ) {
   // add a 'weekly' schedule to the existing set
