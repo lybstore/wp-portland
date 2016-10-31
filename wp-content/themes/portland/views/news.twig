@@ -14,7 +14,7 @@
 							{% set expanded = false %}
 							{% set class = '' %}
 						{% endif %}
-						<div class="panel-heading" role="tab" data-toggle="Newscollapse" data-parent="#accordionNews" href="#News{{loop.index}}" aria-expanded="{{expanded}}" aria-controls="collapse{{loop.index}}">
+						<div class="panel-heading" role="tab" data-toggle="collapse" data-parent="#accordion" href="#News{{loop.index}}" aria-expanded="{{expanded}}" aria-controls="collapse{{loop.index}}">
 							<div class="panel-heading-date">
 								<span>{{post.date|date('m/d/Y')}}</span>
 							</div>
@@ -41,6 +41,7 @@
 									<img src="{{post.thumbnail.src()}}"
 										alt="{{post.thumbnail.caption}}" />
 								{% endif %}
+								{{post.content}}
 							</div>
 						</div>
 					</div>
