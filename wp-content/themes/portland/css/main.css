@@ -1000,31 +1000,44 @@ img {
   .accordion:last-child {
     padding-bottom: 0.8em; }
 
-  .panel-collapse {
-    display: inline !important; }
-    .panel-collapse p {
-      margin: 0;
-      font-family: portland-book;
-      font-size: 1em;
-      background-color: #000;
-      color: #fff;
-      padding-left: 9em;
-      padding-top: 2em;
-      padding-right: 2em; }
-      .panel-collapse p:first-child {
-        float: left;
-        padding-left: 7em;
-        padding-right: 0em;
-        text-align: center;
-        padding-top: 2em; }
-      .panel-collapse p:last-child {
-        padding-left: 9.8em;
-        padding-bottom: 2em;
-        font-size: 0.9em; }
-      .panel-collapse p strong {
-        font-size: 1.1em; }
-      .panel-collapse p b {
-        font-size: 1.2em; }
+  .panel-frq span {
+    display: inline-block;
+    margin-top: 2.5em;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    max-width: 530px;
+    width: 100%; }
+  .panel-frq strong {
+    float: left; }
+  .panel-frq p {
+    font-family: portland-book; }
+
+  .panel-collapse p {
+    margin: 0;
+    font-family: portland-book;
+    font-size: 1em;
+    background-color: #000;
+    color: #fff;
+    padding-left: 9em;
+    padding-top: 2em;
+    padding-right: 2em; }
+    .panel-collapse p:first-child {
+      float: left;
+      padding-left: 7em;
+      padding-right: 0em;
+      text-align: center;
+      padding-top: 2em; }
+    .panel-collapse p:last-child {
+      padding-left: 9.8em;
+      padding-bottom: 2em;
+      font-size: 0.9em; }
+    .panel-collapse p strong {
+      font-size: 1.1em; }
+    .panel-collapse p b {
+      font-size: 1.2em; }
+
+  .frq-collapse p {
+    padding-left: 8em; }
 
   .panel {
     border: transparent;
@@ -1103,10 +1116,7 @@ img {
     display: block; }
   .video-wrapper iframe {
     width: 100%;
-    min-height: 432px; }
-
-  .panel-collapse {
-    position: relative; } }
+    min-height: 432px; } }
 @media only screen and (min-width: 768px) {
   .accordion {
     width: 735px;
@@ -1164,6 +1174,32 @@ img {
     width: 100% !important; }
   #Contact-Container iframe {
     margin-top: 75px !important; } }
+@media only screen and (min-width: 320px) {
+  .mtphr-dnt {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    z-index: 99;
+    background-color: #e6007e;
+    height: 50px;
+    display: none; }
+    .mtphr-dnt h3 {
+      float: left;
+      line-height: 33px;
+      padding-left: 10px;
+      padding-right: 1em;
+      font-family: portland-bold;
+      color: #fff;
+      font-size: 1.2em;
+      text-transform: uppercase; }
+    .mtphr-dnt a {
+      margin-top: 1.2em;
+      display: inline;
+      font-family: portland-book;
+      float: left; } }
+@media only screen and (min-width: 768px) {
+  .mtphr-dnt {
+    display: block; } }
 @media only screen and (min-width: 320px) {
   .buffer {
     display: block;
@@ -1967,16 +2003,16 @@ img {
     font-size: 1.5em;
     font-family: portland-book; } }
 @media only screen and (min-width: 320px) {
-  #Coffee-Container {
+  #bigAp-Container {
     padding-top: 50px; }
-    #Coffee-Container .coffee-hero-container {
+    #bigAp-Container .bgAp-hero-container {
       position: relative; }
-      #Coffee-Container .coffee-hero-container .coffee-hero-headings {
+      #bigAp-Container .bgAp-hero-container .bgAp-hero-headings {
         position: absolute;
         top: 30px;
         left: 1.45em;
         color: #fff; }
-        #Coffee-Container .coffee-hero-container .coffee-hero-headings h2 {
+        #bigAp-Container .bgAp-hero-container .bgAp-hero-headings h2 {
           margin: 0;
           padding: 0;
           text-transform: uppercase;
@@ -1986,10 +2022,10 @@ img {
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Coffee-Container .coffee-hero-container .coffee-hero-headings h2 {
+          #bigAp-Container .bgAp-hero-container .bgAp-hero-headings h2 {
             font-size: 3em; } }
 @media only screen and (min-width: 320px) {
-        #Coffee-Container .coffee-hero-container .coffee-hero-headings p {
+        #bigAp-Container .bgAp-hero-container .bgAp-hero-headings p {
           margin: 0;
           margin-top: 1em;
           padding: 0;
@@ -1998,15 +2034,15 @@ img {
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Coffee-Container .coffee-hero-container .coffee-hero-headings p {
+          #bigAp-Container .bgAp-hero-container .bgAp-hero-headings p {
             font-size: 1.3em; } }
 @media only screen and (min-width: 320px) {
-    #Coffee-Container .content-inner {
+    #bigAp-Container .content-inner {
       display: block;
       margin: 0 auto;
       width: 100%;
       max-width: 1920px; }
-    #Coffee-Container .block-wrap {
+    #bigAp-Container .block-wrap {
       display: inline-block;
       width: 100%; }
 
@@ -3829,16 +3865,16 @@ img {
         #About-Container .about-overlay-content .about-banner p {
           margin: 0;
           font-size: 0.9em; }
-      #About-Container .about-overlay-content .textbox-bg {
+      #About-Container .about-overlay-content .textbox-fill {
         text-align: center;
         position: relative;
         background-color: #c8c8c9; }
-        #About-Container .about-overlay-content .textbox-bg:before {
+        #About-Container .about-overlay-content .textbox-fill:before {
           display: block;
           content: " ";
           width: 100%;
           padding-top: 62.5%; }
-        #About-Container .about-overlay-content .textbox-bg > .content {
+        #About-Container .about-overlay-content .textbox-fill > .content {
           position: absolute;
           top: 0;
           left: 0;
@@ -3916,19 +3952,6 @@ img {
           #About-Container .about-overlay-content .about-textbox p {
             font-size: 1em; } }
 @media only screen and (min-width: 320px) {
-      #About-Container .about-overlay-content .textbox-bg--white {
-        background-color: #fff; }
-        #About-Container .about-overlay-content .textbox-bg--white .about-textbox {
-          color: #000; }
-      #About-Container .about-overlay-content .textbox-bg-fullWidth .about-textbox {
-        color: #333; } }
-      @media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 650px) {
-        #About-Container .about-overlay-content .textbox-bg-fullWidth .about-textbox {
-          padding-top: 4em; } }
-      @media only screen and (min-width: 320px) and (min-width: 650px) and (max-width: 767px) {
-        #About-Container .about-overlay-content .textbox-bg-fullWidth .about-textbox {
-          padding-top: 7.5em; } }
-@media only screen and (min-width: 320px) {
     #About-Container .about-inner-content {
       padding: 0.5em;
       max-width: 1815px;
@@ -3937,6 +3960,12 @@ img {
       #About-Container .about-inner-content article {
         padding: 0.5em !important;
         position: relative; }
+        * #About-Container .about-inner-content article:nth-child(1n+2) .textbox-fill {
+          background-color: #fff; }
+          * #About-Container .about-inner-content article:nth-child(1n+2) .textbox-fill h2 {
+            font-family: portland-medium; }
+          * #About-Container .about-inner-content article:nth-child(1n+2) .textbox-fill h2, * #About-Container .about-inner-content article:nth-child(1n+2) .textbox-fill p {
+            color: #333; }
         #About-Container .about-inner-content article .future-ready-box {
           text-align: center;
           position: absolute;
@@ -3958,6 +3987,35 @@ img {
             #About-Container .about-inner-content article .future-ready-box h2 {
               font-size: 1em;
               padding: 0em; } }
+@media only screen and (min-width: 320px) {
+      #About-Container .about-inner-content .about-1col .textbox-fill {
+        position: relative;
+        background-color: #c8c8c9; }
+        #About-Container .about-inner-content .about-1col .textbox-fill:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 25.83333%; }
+        #About-Container .about-inner-content .about-1col .textbox-fill > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 480px) {
+        #About-Container .about-inner-content .about-1col .textbox-fill {
+          padding-top: 6em; } }
+@media only screen and (min-width: 320px) {
+        #About-Container .about-inner-content .about-1col .textbox-fill h2 {
+          font-family: portland-medium; }
+        #About-Container .about-inner-content .about-1col .textbox-fill p, #About-Container .about-inner-content .about-1col .textbox-fill h2 {
+          color: #333; } }
+      @media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 650px) {
+        #About-Container .about-inner-content .about-1col .textbox-fill {
+          padding-top: 4em; } }
+      @media only screen and (min-width: 320px) and (min-width: 650px) and (max-width: 767px) {
+        #About-Container .about-inner-content .about-1col .textbox-fill {
+          padding-top: 7.5em; } }
 @media only screen and (min-width: 320px) {
       #About-Container .about-inner-content .column-block {
         padding-left: 0em;
