@@ -637,7 +637,6 @@ a {
     text-decoration: none !important; }
 
 body, html {
-  margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2005,16 +2004,17 @@ img {
 @media only screen and (min-width: 320px) {
   #bigAp-Container {
     padding-top: 50px; }
-    #bigAp-Container .bgAp-hero-container {
-      position: relative; }
-      #bigAp-Container .bgAp-hero-container .bgAp-hero-headings {
+    #bigAp-Container .hero-container {
+      position: relative;
+      max-height: 600px;
+      overflow: hidden; }
+      #bigAp-Container .hero-container .hero-heading {
         position: absolute;
         top: 30px;
         left: 1.45em;
         color: #fff; }
-        #bigAp-Container .bgAp-hero-container .bgAp-hero-headings h2 {
+        #bigAp-Container .hero-container .hero-heading h2 {
           margin: 0;
-          padding: 0;
           text-transform: uppercase;
           font-family: portland-bold;
           font-weight: normal;
@@ -2022,10 +2022,10 @@ img {
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #bigAp-Container .bgAp-hero-container .bgAp-hero-headings h2 {
+          #bigAp-Container .hero-container .hero-heading h2 {
             font-size: 3em; } }
 @media only screen and (min-width: 320px) {
-        #bigAp-Container .bgAp-hero-container .bgAp-hero-headings p {
+        #bigAp-Container .hero-container .hero-heading p {
           margin: 0;
           margin-top: 1em;
           padding: 0;
@@ -2034,7 +2034,7 @@ img {
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #bigAp-Container .bgAp-hero-container .bgAp-hero-headings p {
+          #bigAp-Container .hero-container .hero-heading p {
             font-size: 1.3em; } }
 @media only screen and (min-width: 320px) {
     #bigAp-Container .content-inner {
@@ -2046,176 +2046,236 @@ img {
       display: inline-block;
       width: 100%; }
 
-  .coffee-overlay-content {
+  .overlay-content {
     background-color: #4a4a49; }
-    .coffee-overlay-content .coffee-banner {
+    .overlay-content .banner-wrapper {
       margin: 0;
       padding: 1em;
       background-color: #000; }
-      .coffee-overlay-content .coffee-banner p {
+      .overlay-content .banner-wrapper p {
         text-align: center;
         color: #fff;
         font-family: portland-book;
         margin: 0;
         font-size: 1.1em; }
-    .coffee-overlay-content .coffee-inner-content {
+    .overlay-content .inner-content {
       background-color: #4a4a49;
-      padding: 0.5em 1em; }
-      .coffee-overlay-content .coffee-inner-content article {
-        padding: 0.5em 0em; } }
+      padding: 0.5em 1em;
+      /*.coffee-week-summary {
+      	background-color: #ffd100;
+      	margin: 0;
+      	padding: 2em;
+      	border-radius: 25px;
+      	text-align: center;
+      	color: #fff;
+      	font-family: portland-book;
+      	font-size: 1.3em;
+      	line-height: 1;
+      }
+      .coffee-abs-text {
+      	position: absolute;
+      	top: 0;
+      	left: 0;
+      	padding: 0;
+      	margin: 0;
+      	padding: 2em;
+      	color: #000;
+      	font-family: portland-book;
+      	font-size: 1.5em;
+      	line-height: 1.1em;
+      	text-transform: uppercase;
+      }
+      .abs-text-right {
+      	bottom: 0 !important;
+      	right: 0 !important;
+      	text-align: right;
+      	color: #fff;
+      }*/
+      /*.coffee-flex-text {
+      	position: absolute;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	text-align: center;
+      	top: 0;
+      	left: 0;
+      	bottom: 0;
+      	right: 0;
+      	padding: 4em;
+      	font-family: portland-book;
+      	color: #fff;
+      	font-size: 1em;
+      	line-height: 1.1em;
+      	border-radius: 25px;
+      	margin-top: 0em;
+      	&:nth-child(2) {
+      		padding: 2em;
+      	}
+      }*/
+      /*.coffee-more-text {
+      	margin-top: 0em;
+      	@media only screen and (min-width: 768px) {
+      		margin-top: 3em;
+      	}
+      }*/ }
+      .overlay-content .inner-content article {
+        padding: 0.5em; } }
       @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-        .coffee-overlay-content .coffee-inner-content article .coffee-crop {
+        .overlay-content .inner-content article .coffee-crop {
           height: 100%;
           max-height: 200px; } }
 @media only screen and (min-width: 320px) {
-      .coffee-overlay-content .coffee-inner-content video {
+      .overlay-content .inner-content video {
         width: 100%; }
-      .coffee-overlay-content .coffee-inner-content .coffee-week-summary {
-        background-color: #ffd100;
-        margin: 0;
-        padding: 2em;
-        border-radius: 25px;
-        text-align: center;
-        color: #fff;
-        font-family: portland-book;
-        font-size: 1.3em;
-        line-height: 1; }
-      .coffee-overlay-content .coffee-inner-content .coffee-abs-text {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        padding: 2em;
-        color: #000;
-        font-family: portland-book;
-        font-size: 1.5em;
-        line-height: 1.1em;
-        text-transform: uppercase; }
-      .coffee-overlay-content .coffee-inner-content .abs-text-right {
-        bottom: 0 !important;
-        right: 0 !important;
-        text-align: right;
-        color: #fff; }
-      .coffee-overlay-content .coffee-inner-content .coffee-flex-text {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 4em;
-        font-family: portland-book;
-        color: #fff;
-        font-size: 1em;
-        line-height: 1.1em;
-        border-radius: 25px;
-        margin-top: 0em; }
-        .coffee-overlay-content .coffee-inner-content .coffee-flex-text:nth-child(2) {
-          padding: 2em; }
-      .coffee-overlay-content .coffee-inner-content .coffee-more-text {
-        margin-top: 0em; } }
-      @media only screen and (min-width: 320px) and (min-width: 768px) {
-        .coffee-overlay-content .coffee-inner-content .coffee-more-text {
-          margin-top: 3em; } }
-@media only screen and (min-width: 320px) {
-      .coffee-overlay-content .coffee-inner-content .coffee-more {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column; }
-        .coffee-overlay-content .coffee-inner-content .coffee-more button {
+      .overlay-content .inner-content .textbox-bg {
+        position: relative;
+        background-color: #fed116;
+        border-radius: 25px; }
+        .overlay-content .inner-content .textbox-bg:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 82.5%; }
+        .overlay-content .inner-content .textbox-bg > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+        .overlay-content .inner-content .textbox-bg p {
+          position: absolute;
+          top: 0;
+          color: #fff;
+          text-align: center;
+          font-size: 0.9em;
+          font-family: portland-book;
+          padding: 1.5em; }
+        .overlay-content .inner-content .textbox-bg button {
           padding: 0;
           border: none;
           background: none;
           font-family: portland-medium;
           text-transform: uppercase;
-          font-size: 0.7em;
+          font-size: 0.8em;
           transition: all 0.3s ease-in-out;
-          bottom: 0; }
-          .coffee-overlay-content .coffee-inner-content .coffee-more button:hover {
+          bottom: 1.2em;
+          position: absolute;
+          color: #fff;
+          width: 100%; }
+          .overlay-content .inner-content .textbox-bg button:hover {
             color: grey;
-            font-size: 0.75em; }
-      .coffee-overlay-content .coffee-inner-content #carousel-example-generic {
+            font-size: 0.85em; }
+      .overlay-content .inner-content .textbox-bg-long {
+        position: relative; }
+        .overlay-content .inner-content .textbox-bg-long:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 49.16667%; }
+        .overlay-content .inner-content .textbox-bg-long > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+      .overlay-content .inner-content #carousel-example-generic {
         margin: 0;
         padding: 0; }
-        .coffee-overlay-content .coffee-inner-content #carousel-example-generic .item {
+        .overlay-content .inner-content #carousel-example-generic .item {
           padding: 0em 0.5em; }
-        .coffee-overlay-content .coffee-inner-content #carousel-example-generic .carousel-indicators {
+        .overlay-content .inner-content #carousel-example-generic .carousel-indicators {
           position: absolute;
           top: auto;
           bottom: 25px !important;
           left: 46%; }
-          .coffee-overlay-content .coffee-inner-content #carousel-example-generic .carousel-indicators li {
+          .overlay-content .inner-content #carousel-example-generic .carousel-indicators li {
             width: 10px !important;
             height: 10px !important;
             margin: 0 5px !important;
             border: none !important; }
-            .coffee-overlay-content .coffee-inner-content #carousel-example-generic .carousel-indicators li:active {
+            .overlay-content .inner-content #carousel-example-generic .carousel-indicators li:active {
               border: none; }
-          .coffee-overlay-content .coffee-inner-content #carousel-example-generic .carousel-indicators .active {
+          .overlay-content .inner-content #carousel-example-generic .carousel-indicators .active {
             width: 10px;
             height: 10px;
             margin-left: 5px;
             border: none;
             margin-top: 0;
             margin-bottom: 0; }
-        .coffee-overlay-content .coffee-inner-content #carousel-example-generic button {
+        .overlay-content .inner-content #carousel-example-generic button {
           border: none;
           background: none;
           top: 50%; }
-    .coffee-overlay-content .carousel-control .glyphicon-chevron-left,
-    .coffee-overlay-content .carousel-control .glyphicon-chevron-right,
-    .coffee-overlay-content .carousel-control .icon-next, .coffee-overlay-content .carousel-control .icon-prev {
+    .overlay-content .carousel-control .glyphicon-chevron-left,
+    .overlay-content .carousel-control .glyphicon-chevron-right,
+    .overlay-content .carousel-control .icon-next, .overlay-content .carousel-control .icon-prev {
       top: 0%; }
-    .coffee-overlay-content .carousel-control .glyphicon-chevron-left,
-    .coffee-overlay-content .carousel-control .icon-prev {
+    .overlay-content .carousel-control .glyphicon-chevron-left,
+    .overlay-content .carousel-control .icon-prev {
       margin-left: -30px; }
-    .coffee-overlay-content .carousel-control
+    .overlay-content .carousel-control
     .glyphicon-chevron-right,
-    .coffee-overlay-content .carousel-control .icon-next {
+    .overlay-content .carousel-control .icon-next {
       margin-right: -30px; }
-    .coffee-overlay-content .glyphicon {
+    .overlay-content .glyphicon {
       font-size: 0.7em; } }
 @media only screen and (min-width: 320px) and (min-width: 768px) {
-  #Coffee-Container .coffee-hero-container .coffee-hero-headings p {
-    font-size: 1.3em; }
+  /*#Coffee-Container {
+  	.coffee-hero-container {
+  		.coffee-hero-headings {
+  			p {
+  				font-size: 1.3em;
+  			}
+  		}
+  	}
+  }*/
+  	/*.coffee-overlay-content {
 
-  .coffee-overlay-content .coffee-banner {
-    padding: 2em 8em; }
-  .coffee-overlay-content .coffee-inner-content {
-    padding: 1em !important; }
-    .coffee-overlay-content .coffee-inner-content article {
-      padding: 0.8em; }
-    .coffee-overlay-content .coffee-inner-content video {
-      width: 100%; }
-    .coffee-overlay-content .coffee-inner-content .coffee-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .coffee-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .coffee-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .coffee-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .coffee-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; }
+  		.coffee-banner {
+  			padding: 2em 8em;
+  			p {
+  				//font-size: 1.5em;
+  			}
+  		}
+  		.coffee-inner-content {
+  			padding: 1em !important;
+  			article {
+  				padding: 0.8em;
+  			}
+  			video {
+  				width: 100%;
+  			}
+  			.coffee-week-summary {
+  				padding: 1.5em;
+  				font-size: 1.1em;
+  				line-height: 1.1;
+  			}
+  		}
+  		#carousel-example-generic {
+  			.carousel-indicators {
+  				position: absolute;
+  				top: auto;
+  				bottom: 25px !important;
+  				left: 46%;
+  				li {
+  					width: 10px !important;
+  					height: 10px !important;
+  					margin: 0 5px !important;
+  					border: none !important;
+  					&:active {border: none;}
+  				}
+  				.active {
+  					width: 10px;
+  					height: 10px;
+  					margin-left: 5px;
+  					border: none;
 
+  					margin-top: 0;
+  					margin-bottom: 0;
+  				}
+  			}
+  		}
+  	}*/
   .carousel-control
   .glyphicon-chevron-right,
   .carousel-control .icon-next {
@@ -2225,10 +2285,10 @@ img {
   .carousel-control .icon-prev {
     margin-left: -10px; } }
 @media only screen and (min-width: 320px) and (min-width: 1200px) {
-  #Coffee-Container .coffee-hero-container .coffee-hero-headings h2 {
+  #bigAp-Container .hero-container .hero-heading h2 {
     font-size: 4.5em;
     line-height: 1; }
-  #Coffee-Container .coffee-hero-container .coffee-hero-headings p {
+  #bigAp-Container .hero-container .hero-heading p {
     font-size: 1.5em; }
 
   .coffee-overlay-content .coffee-banner {
@@ -3476,374 +3536,6 @@ img {
       margin-top: 0;
       margin-bottom: 0; } }
 @media only screen and (min-width: 320px) {
-  #Jwalker-Container .hero-container {
-    position: relative; }
-    #Jwalker-Container .hero-container .hero-headings {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #fff;
-      padding: 0em 0em 0em 1.45em;
-      top: 90px; }
-      #Jwalker-Container .hero-container .hero-headings h2 {
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-        font-family: portland-bold;
-        font-weight: normal;
-        font-size: 2em;
-        line-height: 1;
-        transition: font-size 0.3s;
-        transition: font-size 0.3s; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        #Jwalker-Container .hero-container .hero-headings h2 {
-          font-size: 3em; } }
-@media only screen and (min-width: 320px) {
-      #Jwalker-Container .hero-container .hero-headings p {
-        margin: 0;
-        margin-top: 1em;
-        padding: 0;
-        font-family: portland-book;
-        font-size: 1em;
-        line-height: 1;
-        transition: font-size 0.3s; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        #Jwalker-Container .hero-container .hero-headings p {
-          font-size: 1.3em; } }
-@media only screen and (min-width: 320px) {
-    #Jwalker-Container .hero-container .hero-image {
-      padding-top: 74px; }
-      #Jwalker-Container .hero-container .hero-image img {
-        max-height: 600px; }
-
-  .overlay-content .banner {
-    margin: 0;
-    padding: 1em 1.5em;
-    background-color: #000; }
-    .overlay-content .banner p {
-      text-align: center;
-      color: #fff;
-      background-color: #000;
-      font-family: portland-book;
-      margin: 0; }
-  .overlay-content .jwalker-inner-content {
-    background-color: #4a4a49;
-    display: inline-block;
-    padding: 0.5em 1em 1em 1em; }
-    .overlay-content .jwalker-inner-content article {
-      padding: 0.5em 0em; } }
-    @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-      .overlay-content .jwalker-inner-content article .jwalker-crop {
-        height: 100%;
-        max-height: 200px; } }
-@media only screen and (min-width: 320px) {
-    .overlay-content .jwalker-inner-content video {
-      width: 100%; }
-    .overlay-content .jwalker-inner-content .jwalker-week-summary {
-      background-color: #ffd100;
-      margin: 0;
-      padding: 2em;
-      border-radius: 25px;
-      text-align: center;
-      color: #fff;
-      font-family: portland-book;
-      font-size: 1.3em;
-      line-height: 1; }
-    .overlay-content .jwalker-inner-content .column-block {
-      padding: 0em; }
-    .overlay-content .jwalker-inner-content .spacing-bottom {
-      margin-bottom: 1em; }
-    .overlay-content .jwalker-inner-content .jwalker-abs-text {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      padding: 0;
-      margin: 0;
-      padding: 2em;
-      color: #000;
-      font-family: portland-book;
-      font-size: 1.5em;
-      line-height: 1.1em;
-      text-transform: uppercase;
-      text-align: right;
-      color: #fff; }
-    .overlay-content .jwalker-inner-content .abs-text-right {
-      bottom: 0 !important;
-      right: 0 !important;
-      text-align: right;
-      color: #fff; }
-    .overlay-content .jwalker-inner-content .jwalker-flex-text {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 4em;
-      font-family: portland-book;
-      color: #fff;
-      font-size: 1em;
-      line-height: 1.1em;
-      border-radius: 25px; }
-      .overlay-content .jwalker-inner-content .jwalker-flex-text:nth-child(2) {
-        padding: 2em; }
-    .overlay-content .jwalker-inner-content .jwalker-more-text {
-      margin-top: 0em; } }
-    @media only screen and (min-width: 320px) and (min-width: 768px) {
-      .overlay-content .jwalker-inner-content .jwalker-more-text {
-        margin-top: 3em; } }
-@media only screen and (min-width: 320px) {
-    .overlay-content .jwalker-inner-content .jwalker-more {
-      flex-direction: column;
-      justify-content: space-between;
-      display: flex;
-      flex-direction: column; }
-      .overlay-content .jwalker-inner-content .jwalker-more button {
-        padding: 0;
-        border: none;
-        background: none;
-        font-family: portland-bold;
-        text-transform: uppercase;
-        font-size: 0.7em;
-        transition: all 0.3s ease-in-out;
-        bottom: 0; }
-        .overlay-content .jwalker-inner-content .jwalker-more button:hover {
-          color: grey;
-          font-size: 0.75em; }
-    .overlay-content .jwalker-inner-content #carousel-example-generic .item {
-      padding: 0em 0.5em; }
-    .overlay-content .jwalker-inner-content #carousel-example-generic .carousel-indicators {
-      position: absolute;
-      top: auto;
-      bottom: 25px !important;
-      left: 46%; }
-      .overlay-content .jwalker-inner-content #carousel-example-generic .carousel-indicators li {
-        width: 10px !important;
-        height: 10px !important;
-        margin: 0 5px !important;
-        border: none !important; }
-        .overlay-content .jwalker-inner-content #carousel-example-generic .carousel-indicators li:active {
-          border: none; }
-      .overlay-content .jwalker-inner-content #carousel-example-generic .carousel-indicators .active {
-        width: 10px;
-        height: 10px;
-        margin-left: 5px;
-        border: none;
-        margin-top: 0;
-        margin-bottom: 0; }
-    .overlay-content .jwalker-inner-content #carousel-example-generic button {
-      border: none;
-      background: none;
-      top: 50%; } }
-@media only screen and (min-width: 320px) and (min-width: 768px) {
-  #Jwalker-Container .jwalker-hero-container .jwalker-hero-headings {
-    top: 90px; }
-    #Jwalker-Container .jwalker-hero-container .jwalker-hero-headings h2 {
-      font-size: 3.5em;
-      line-height: 1; }
-    #Jwalker-Container .jwalker-hero-container .jwalker-hero-headings p {
-      font-size: 1.3em; }
-
-  .overlay-content .banner {
-    padding: 2em 7em; }
-    .overlay-content .banner p {
-      font-size: 1.5em; }
-  .overlay-content .inner-content {
-    padding-top: 1em; }
-    .overlay-content .inner-content article {
-      padding: 0.5em 0em; }
-    .overlay-content .inner-content video {
-      width: 100%; }
-    .overlay-content .inner-content .week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media only screen and (min-width: 320px) and (min-width: 1200px) {
-  #Jwalker-Container .hero-container .hero-headings {
-    top: 90px; }
-    #Jwalker-Container .hero-container .hero-headings h2 {
-      font-size: 4em;
-      line-height: 1; }
-    #Jwalker-Container .hero-container .hero-headings p {
-      font-size: 1.5em; }
-
-  .overlay-content .banner {
-    padding: 3em 20em; }
-    .overlay-content .banner p {
-      font-size: 1.5em; }
-  .overlay-content .jwalker-inner-content {
-    padding: 1em 5em; }
-    .overlay-content .jwalker-inner-content article {
-      padding: 0.5em 0.5em; }
-    .overlay-content .jwalker-inner-content video {
-      width: 100%; }
-    .overlay-content .jwalker-inner-content .gcsc-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
-@media only screen and (min-width: 320px) {
-  .work-container {
-    padding-top: 3.8em; }
-
-  .hero-container {
-    position: relative;
-    max-height: 600px;
-    overflow: hidden; }
-    .hero-container .hero-headings {
-      position: absolute;
-      top: 20px;
-      left: 1.45em;
-      color: #fff;
-      line-height: 1; }
-      .hero-container .hero-headings h2 {
-        text-transform: uppercase;
-        font-family: portland-bold;
-        font-size: 1.5em;
-        transition: font-size 0.3s;
-        margin-top: 5px; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        .hero-container .hero-headings h2 {
-          font-size: 1.8em; } }
-@media only screen and (min-width: 320px) {
-      .hero-container .hero-headings p {
-        margin-top: 1em;
-        font-family: portland-book;
-        font-size: 0.9em;
-        transition: font-size 0.3s; } }
-      @media only screen and (min-width: 320px) and (min-width: 500px) {
-        .hero-container .hero-headings p {
-          font-size: 1.3em; } }
-
-@media only screen and (min-width: 320px) {
-  .overlay-content {
-    background-color: rgba(26, 26, 26, 0.1); }
-    .overlay-content .overlay-banner {
-      max-width: 1815px;
-      margin: 0 auto;
-      padding: 1em; }
-      .overlay-content .overlay-banner p {
-        text-align: center;
-        color: #fff;
-        font-family: portland-book;
-        margin: 0;
-        font-size: 0.8em; }
-    .overlay-content .inner-content {
-      max-width: 1815px;
-      margin: 0 auto;
-      padding: 1em;
-      background-color: #4a4a49;
-      display: table; }
-      .overlay-content .inner-content div {
-        padding: 0.5em; } }
-      @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-        .overlay-content .inner-content div .luton-crop {
-          height: 100%;
-          max-height: 200px; } }
-@media only screen and (min-width: 320px) {
-      .overlay-content .inner-content .textbox-bg {
-        position: relative;
-        background-color: #000;
-        border-radius: 25px;
-        text-align: center;
-        color: #fff; }
-        .overlay-content .inner-content .textbox-bg:before {
-          display: block;
-          content: " ";
-          width: 100%;
-          padding-top: 70.83333%; }
-        .overlay-content .inner-content .textbox-bg > .content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0; }
-        .overlay-content .inner-content .textbox-bg p {
-          position: absolute;
-          top: 0em;
-          left: 0em;
-          padding: 3em 1.5em; } }
-        @media only screen and (min-width: 320px) and (min-width: 992px) and (max-width: 1000px) {
-          .overlay-content .inner-content .textbox-bg p {
-            padding: 2.2em 1.5em; } }
-        @media only screen and (min-width: 320px) and (min-width: 1136px) and (max-width: 1400px) {
-          .overlay-content .inner-content .textbox-bg p {
-            padding: 4.5em 1.5em; } }
-        @media only screen and (min-width: 320px) and (min-width: 1400px) {
-          .overlay-content .inner-content .textbox-bg p {
-            padding: 6em 1.5em; } }
-@media only screen and (min-width: 320px) {
-        .overlay-content .inner-content .textbox-bg button {
-          padding: 0;
-          border: none;
-          background: none;
-          font-family: portland-bold;
-          text-transform: uppercase;
-          font-size: 1em;
-          transition: all 0.3s ease-in-out;
-          bottom: 0; }
-          .overlay-content .inner-content .textbox-bg button:hover {
-            color: #fff;
-            font-size: 1.1em; }
-      .overlay-content .inner-content .column-block {
-        padding: 0em; }
-      .overlay-content .inner-content .curve-container .curve-text {
-        position: absolute;
-        top: 0;
-        padding: 1.5em;
-        font-family: portland-book;
-        font-size: 1.5em;
-        line-height: 1.1em;
-        text-transform: uppercase;
-        color: #fff; }
-      .overlay-content .inner-content .curve-container img {
-        border-radius: 25px; } }
-@media only screen and (min-width: 768px) {
-  .overlay-content .overlay-banner {
-    padding: 2em 8em; }
-    .overlay-content .overlay-banner p {
-      font-size: 1.3em; } }
-@media only screen and (min-width: 320px) {
   #About-Container {
     padding-top: 53px; }
     #About-Container .about-overlay-content {
@@ -3908,21 +3600,6 @@ img {
             right: 0;
             bottom: 0; } }
 @media only screen and (min-width: 320px) {
-      #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
-        position: relative; }
-        #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
-          display: block;
-          content: " ";
-          width: 100%;
-          padding-top: 25%; }
-        #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0; }
-      #About-Container .about-overlay-content .textbox-bg-blck {
-        background-color: #000; }
       #About-Container .about-overlay-content .about-textbox {
         position: absolute;
         top: 0;
