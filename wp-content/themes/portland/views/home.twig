@@ -13,8 +13,10 @@
 		<section class="ipad-display home-final-gradient">
 			{% include 'partials/home/tablet.twig' %}
 		</section>
-		<section class="desktop-display home-gradient2" ng-cloak>
-			<div class="container desktop-align-grid home-final-gradient">
+		<section class="desktop-display home-gradient2">
+		{% if post.show_ticker %}
+			<div class="container container-showTicker desktop-align-grid home-final-gradient">
+		{% endif %}
 				<div class="col-sm-8 grid-block">
 					<div class="grid-block-inner">
 						{% if work[0] %}

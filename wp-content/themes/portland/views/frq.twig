@@ -19,7 +19,7 @@
 							<div class="future-box-date panel-heading-date">
 								<img src="{{theme.link}}/assets/FRQs/FRQ-Pointing-Right.png" alt="Arrow" />
 							</div>
-							<div class="panel-title">
+							<div class="panel-frq panel-title">
 								<span data-toggle="collapse{{class}}">
 									<strong>Q:&nbsp;</strong>
 									<p>{{post.title}}</p>
@@ -27,9 +27,9 @@
 							</div>
 						</div><!-- PANEL HEADING ENDS HERE -->
 						{% if loop.index0 == 0 %}
-						<div id="collapse{{loop.index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{loop.index}}">
+						<div id="collapse{{loop.index}}" class="frq-collapse panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{loop.index}}">
 						{% else %}
-						<div id="collapse{{loop.index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{loop.index}}">
+						<div id="collapse{{loop.index}}" class="frq-collapse panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{loop.index}}">
 						{% endif %}
 							<p><strong>A:&nbsp;</strong></p>
 							{{post.content}}
