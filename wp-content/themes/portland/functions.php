@@ -29,7 +29,11 @@ class WoodChippr extends TimberSite {
     include_once 'inc/functions/wp-tidy.php';
 
     /* CHIPPR functions: Declare theme support options in dedicated file */
-    include_once 'inc/functions/theme-support.php';
+		include_once 'inc/functions/theme-support.php';
+
+		/* CHIPPR functions: Utility functions */
+
+    include_once 'inc/functions/helpers.php';
 
     /* CHIPPR functions: Custom gallery templating using Timber */
     include_once 'inc/functions/gallery.php';
@@ -45,6 +49,10 @@ class WoodChippr extends TimberSite {
 
 		/* CHIPPR post_types: News */
     include_once 'inc/post_type/news.php';
+
+		/* CHIPPR post_types: News */
+		include_once 'inc/post_type/work.php';
+    include_once 'inc/post_type/sectors.php';
 
 		/* CHIPPR custom fields */
 		include_once 'inc/acf/acf.php';
