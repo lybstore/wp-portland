@@ -15,6 +15,23 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 $context = Timber::get_context();
 $context['post'] = Timber::get_post();
+$context['work'] = Timber::get_posts([
+	'post_type' => 'work',
+	'posts_per_page' => 20,
+	'numberposts' => 20
+]);
+$context['news'] = Timber::get_posts([
+	'posts_per_page' => 1,
+	'numberposts' => 1
+]);
 $context['newsticker'] = get_field('newsticker');
+
+if(file_exists(get_stylesheet_directory().'/inc/twittercache/results.json')){
+	$tweet_json = file_get_contents(get_stylesheet_directory().'/inc/twittercache/results.json');
+	$context['tweet'] = json_decode(json_decode($tweet_json, true), true);
+}
+
+$context['frqs'] = get_post_type_archive_link( 'frq' );
+
 $templates = array( 'home.twig' );
 Timber::render( $templates, $context );
