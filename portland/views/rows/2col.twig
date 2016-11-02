@@ -1,0 +1,30 @@
+<article class="col-sm-6 grid-tile about-2col">
+  {% if row.col_1_type == "text" %}
+    {% include 'blocks/text.twig' with {
+      title : row.col_1_title,
+      text : row.col_1_text,
+      image : theme.link ~ "/assets/aboutpage/about-grey.png",
+      theme : theme
+    } only %}
+  {% else %}
+    {% include 'blocks/image.twig' with {
+      image : TimberImage(row.col_1_image),
+      theme : theme
+    } only %}
+  {% endif %}
+</article>
+<article class="col-sm-6 grid-tile">
+  {% if row.col_2_type == "text" %}
+    {% include 'blocks/text.twig' with {
+      title : row.col_2_title,
+      text : row.col_2_text,
+      image : theme.link ~ "/assets/aboutpage/about-grey.png",
+      theme : theme
+    } only %}
+  {% else %}
+    {% include 'blocks/image.twig' with {
+      image : TimberImage(row.col_2_image),
+      theme : theme
+    } only %}
+  {% endif %}
+</article>
