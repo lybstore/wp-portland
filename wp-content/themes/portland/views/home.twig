@@ -104,8 +104,10 @@
 						{% endif %}
 
 						<article class="col-sm-6">
-							<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
-							<p>{{fn('render_tweet', tweet[0])}}</p>
+							{% if tweet|length > 0 %}
+								<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
+								<p>{{fn('render_tweet', tweet[0])}}</p>
+							{% endif %}
 						</article>
 					</div>
 				</div>
