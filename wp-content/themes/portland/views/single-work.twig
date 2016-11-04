@@ -18,6 +18,12 @@
 
   		<div class="inner-content content-inner">
         <div style="position: relative;" class="packery-wrap">
+          {% if post.text_colour == 'white' %}
+            {% set text = "#FFFFFF" %}
+          {% else %}
+            {% set text = "#000000" %}
+          {% endif %}
+          {% set colour = post.colour %}
           {% for item in post.get_field('items') %}
             {% if item.type == "img" %}
       				<article class="packery-item" style="width: {{item.width}}%">
@@ -32,7 +38,7 @@
                 <div class="playpause"></div>
       				</article>
             {% elseif item.type == "txt" %}
-              <article class="packery-item" style="width: {{item.width}}%">
+              <article class="packery-item" style="width: {{item.width}}%; colour: {{text}}; background-color: {{colour}};">
                 <div class="textbox-bg">
                   <p>
                     {{item.text}}
@@ -68,7 +74,7 @@
               </div>
             {% elseif item.type == "url" %}
       				<article class="packery-item"
-                style="width: {{item.width}}%;">
+                style="width: {{item.width}}%; colour: {{text}}; background-color: {{colour}};">
       					<div class="textbox-bg textbox-bg-long">
       						<p>We raised a remarkable amount for Project Waterfall and made Allegra CEO Jeff Young so happy that he’s asked to drive the next UK Coffee Week campaign, so we can carry on spreading the smiles.</p>
       						<button href="work-market-comms">view more marketing &amp; communications projects</button>
