@@ -9,6 +9,11 @@
   .grid-block {
     padding: 0em 0.2em;
     margin-bottom: 1em; }
+    .grid-block:first-child {
+      margin-top: 6.5em; }
+
+  .container-showTicker .grid-block:first-child {
+    margin-top: 9em; }
 
   .tile {
     border-radius: 25px; }
@@ -63,7 +68,7 @@
       margin-top: 0;
       margin-bottom: 0.5em; }
     .ipad-display .grid-block-tablet {
-      margin-top: 6.5em; }
+      margin-top: 9.5em; }
 
   .desktop-display {
     display: none; }
@@ -418,7 +423,25 @@ html.fp-enabled,
     background: black; }
   #HomeGrid .right {
     float: right;
-    text-align: right; } }
+    text-align: right; }
+  #HomeGrid .twitter-widget {
+    background-color: #000;
+    padding: 2em;
+    border-radius: 25px; }
+    #HomeGrid .twitter-widget p {
+      color: #fff;
+      font-size: 0.9em;
+      line-height: 1.3; }
+      #HomeGrid .twitter-widget p a {
+        color: #e6007e;
+        font-family: portland-book; }
+      #HomeGrid .twitter-widget p:first-child a {
+        font-family: portland-bold;
+        color: #fff;
+        font-size: 1.1em; } }
+@media only screen and (min-width: 768px) {
+  #HomeGrid .twitter-widget {
+    padding: 4em 2em; } }
 @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1110px) {
   #HomeGrid .buffer {
     height: 70px; } }
@@ -458,6 +481,11 @@ html.fp-enabled,
       font-size: 0.9em; } }
 
 @media only screen and (min-width: 1360px) {
+  #HomeGrid .twitter-widget {
+    padding: 2em; }
+    #HomeGrid .twitter-widget p {
+      font-size: 0.9em;
+      line-height: 1.5; }
   #HomeGrid .grid-headings--big {
     font-size: 1.5em;
     padding: 1em; }
@@ -1007,7 +1035,9 @@ img {
     max-width: 530px;
     width: 100%; }
   .panel-frq strong {
-    float: left; }
+    float: left;
+    padding-right: 0.7em;
+    padding-bottom: 2em; }
   .panel-frq p {
     font-family: portland-book; }
 
@@ -1034,9 +1064,6 @@ img {
       font-size: 1.1em; }
     .panel-collapse p b {
       font-size: 1.2em; }
-
-  .frq-collapse p {
-    padding-left: 8em; }
 
   .panel {
     border: transparent;
@@ -1115,7 +1142,32 @@ img {
     display: block; }
   .video-wrapper iframe {
     width: 100%;
-    min-height: 432px; } }
+    min-height: 432px; }
+
+  #News-Section .panel-collapse {
+    float: left; } }
+@media only screen and (min-width: 320px) and (min-width: 200px) and (max-width: 450px) {
+  #News-Section .panel-news {
+    max-width: 244px; } }
+@media only screen and (min-width: 320px) {
+  #News-Section .panel-news article {
+    font-size: 0.8em; } }
+@media only screen and (min-width: 320px) and (min-width: 450px) and (max-width: 580px) {
+  #News-Section .panel-news {
+    max-width: 300px; }
+    #News-Section .panel-news article {
+      font-size: 0.9em; } }
+@media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 650px) {
+  #News-Section .panel-news {
+    max-width: 400px; }
+    #News-Section .panel-news article {
+      font-size: 1em; } }
+@media only screen and (min-width: 320px) and (min-width: 650px) {
+  #News-Section .panel-news {
+    max-width: 500px; }
+    #News-Section .panel-news article {
+      font-size: 1em; } }
+
 @media only screen and (min-width: 768px) {
   .accordion {
     width: 735px;
@@ -1177,8 +1229,9 @@ img {
   .mtphr-dnt {
     position: fixed;
     width: 100%;
-    top: 70px;
+    top: 62px;
     z-index: 99;
+    color: #fff;
     background-color: #e6007e;
     height: 50px;
     display: none; }
@@ -2047,7 +2100,8 @@ img {
       width: 100%; }
 
   .overlay-content {
-    background-color: #4a4a49; }
+    background-color: #4a4a49;
+    position: relative; }
     .overlay-content .banner-wrapper {
       margin: 0;
       padding: 1em;
@@ -2061,6 +2115,8 @@ img {
     .overlay-content .inner-content {
       background-color: #4a4a49;
       padding: 0.5em 1em;
+      max-width: 1815px;
+      margin: 0 auto;
       /*.coffee-week-summary {
       	background-color: #ffd100;
       	margin: 0;
@@ -2119,12 +2175,7 @@ img {
       	}
       }*/ }
       .overlay-content .inner-content article {
-        padding: 0.5em; } }
-      @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 991px) {
-        .overlay-content .inner-content article .coffee-crop {
-          height: 100%;
-          max-height: 200px; } }
-@media only screen and (min-width: 320px) {
+        padding: 0.5em; }
       .overlay-content .inner-content video {
         width: 100%; }
       .overlay-content .inner-content .textbox-bg {
@@ -2230,7 +2281,7 @@ img {
   	}
   }*/
   	/*.coffee-overlay-content {
-
+  
   		.coffee-banner {
   			padding: 2em 8em;
   			p {
@@ -2269,7 +2320,7 @@ img {
   					height: 10px;
   					margin-left: 5px;
   					border: none;
-
+  
   					margin-top: 0;
   					margin-bottom: 0;
   				}
@@ -3536,6 +3587,166 @@ img {
       margin-top: 0;
       margin-bottom: 0; } }
 @media only screen and (min-width: 320px) {
+  #Medium-Container .hero-container {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden; }
+    #Medium-Container .hero-container .hero-headings {
+      position: absolute;
+      left: 0;
+      color: #fff;
+      padding: 0em 0em 0em 1.45em;
+      top: 90px; }
+      #Medium-Container .hero-container .hero-headings h2 {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: portland-bold;
+        font-weight: normal;
+        font-size: 2em;
+        line-height: 1;
+        transition: font-size 0.3s;
+        transition: font-size 0.3s; } }
+      @media only screen and (min-width: 320px) and (min-width: 500px) {
+        #Medium-Container .hero-container .hero-headings h2 {
+          font-size: 3em; } }
+@media only screen and (min-width: 320px) {
+      #Medium-Container .hero-container .hero-headings p {
+        margin-top: 1em;
+        font-family: portland-book;
+        font-size: 1em;
+        line-height: 1;
+        transition: font-size 0.3s; } }
+      @media only screen and (min-width: 320px) and (min-width: 500px) {
+        #Medium-Container .hero-container .hero-headings p {
+          font-size: 1.3em; } }
+@media only screen and (min-width: 320px) {
+    #Medium-Container .hero-container .hero-image {
+      padding-top: 74px; }
+      #Medium-Container .hero-container .hero-image img {
+        max-height: 600px; }
+  #Medium-Container .overlay-content .banner {
+    margin: 0;
+    padding: 1em 1.5em;
+    background-color: #000; }
+    #Medium-Container .overlay-content .banner p {
+      text-align: center;
+      color: #fff;
+      background-color: #000;
+      font-family: portland-book;
+      margin: 0; }
+  #Medium-Container .inner-content {
+    background-color: #4a4a49;
+    padding: 0.5em 1em 1em 1em;
+    width: 100%;
+    margin: 0 auto;
+    display: table; }
+  #Medium-Container .col-md-12 {
+    padding-left: 0;
+    padding-right: 0; }
+  #Medium-Container .block-ends {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em; }
+  #Medium-Container .block-carousel {
+    padding-left: 0.7em;
+    padding-right: 0.7em; }
+  #Medium-Container .bg-block {
+    padding: 0; }
+  #Medium-Container .abs-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    padding: 2em;
+    color: #000;
+    font-family: portland-book;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff; } }
+  @media only screen and (min-width: 320px) and (max-width: 350px) {
+    #Medium-Container .abs-text {
+      font-size: 1.1em; } }
+@media only screen and (min-width: 320px) {
+  #Medium-Container .textbox-bg {
+    background-color: #000;
+    position: relative; }
+    #Medium-Container .textbox-bg:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 56.66667%; }
+    #Medium-Container .textbox-bg > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+    #Medium-Container .textbox-bg p {
+      width: 100%; } }
+    @media only screen and (min-width: 320px) and (max-width: 350px) {
+      #Medium-Container .textbox-bg p {
+        font-size: 0.8em; } }
+    @media only screen and (min-width: 320px) and (min-width: 450px) and (max-width: 570px) {
+      #Medium-Container .textbox-bg p {
+        margin-top: 1.5em; } }
+    @media only screen and (min-width: 320px) and (min-width: 570px) and (max-width: 630px) {
+      #Medium-Container .textbox-bg p {
+        margin-top: 5.5em; } }
+  @media only screen and (min-width: 320px) and (max-width: 350px) {
+    #Medium-Container .textbox-bg button {
+      font-size: 0.6em; } }
+  @media only screen and (min-width: 320px) and (min-width: 350px) and (max-width: 600px) {
+    #Medium-Container .textbox-bg button {
+      font-size: 0.7em; } }
+
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  #Medium-Container .column-block {
+    padding: 0 0.25em; } }
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+  #Medium-Container .block-ends {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em; } }
+@media only screen and (min-width: 768px) {
+  #Medium-Container article {
+    padding: 0.5em; }
+    #Medium-Container article .textbox-bg {
+      position: relative; }
+      #Medium-Container article .textbox-bg:before {
+        display: block;
+        content: " ";
+        width: 100%;
+        padding-top: 57.5%; }
+      #Medium-Container article .textbox-bg > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
+    @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1024px) {
+      #Medium-Container article .textbox-bg p {
+        margin-top: 0.5em; } }
+
+@media only screen and (min-width: 1200px) {
+  #Medium-Container .column-block {
+    padding: 0; }
+    #Medium-Container .column-block article {
+      padding: 0.5em; }
+      #Medium-Container .column-block article .textbox-bg {
+        position: relative; }
+        #Medium-Container .column-block article .textbox-bg:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 82.5%; }
+        #Medium-Container .column-block article .textbox-bg > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; } }
+@media only screen and (min-width: 320px) {
   #About-Container {
     padding-top: 53px; }
     #About-Container .about-overlay-content {
@@ -3572,40 +3783,13 @@ img {
           left: 0;
           right: 0;
           bottom: 0; }
-      #About-Container .about-overlay-content .textbox-bg-fullWidth {
-        position: relative; }
-        #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
-          display: block;
-          content: " ";
-          width: 100%;
-          padding-top: 62.5%; }
-        #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0; } }
-      @media only screen and (min-width: 320px) and (max-width: 480px) {
-        #About-Container .about-overlay-content .textbox-bg-fullWidth {
-          position: relative; }
-          #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
-            display: block;
-            content: " ";
-            width: 100%;
-            padding-top: 95.83333%; }
-          #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0; } }
-@media only screen and (min-width: 320px) {
       #About-Container .about-overlay-content .about-textbox {
         position: absolute;
         top: 0;
         bottom: 0;
         padding: 1em;
         color: #fff;
+        width: 100%;
         font-family: portland-bold; } }
       @media only screen and (min-width: 320px) and (min-width: 580px) and (max-width: 650px) {
         #About-Container .about-overlay-content .about-textbox {
@@ -3666,6 +3850,7 @@ img {
               padding: 0em; } }
 @media only screen and (min-width: 320px) {
       #About-Container .about-inner-content .about-1col .textbox-fill {
+        text-align: center;
         position: relative;
         background-color: #c8c8c9; }
         #About-Container .about-inner-content .about-1col .textbox-fill:before {
@@ -3705,37 +3890,12 @@ img {
           padding-right: 0; }
       #About-Container .about-inner-content .spacing-bottom {
         margin-bottom: 0.5em; } }
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    #About-Container .about-1col .textbox-fill .about-textbox h2 {
+      font-size: 1.2em;
+      line-height: 31px; } }
+
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  #About-Container .about-overlay-content .textbox-bg-fullWidth {
-    position: relative; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
-      display: block;
-      content: " ";
-      width: 100%;
-      padding-top: 25.83333%; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-  #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
-    position: relative;
-    padding: 3.5em; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
-      display: block;
-      content: " ";
-      width: 100%;
-      padding-top: 8.33333%; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-    + #About-Container .about-overlay-content .textbox-bg-fullWidth-thin .about-inner-content article .future-ready-box {
-      padding: 2em 4em;
-      position: relative; }
   #About-Container .about-overlay-content .about-banner h2 {
     font-size: 1.2em; }
   #About-Container .about-overlay-content .about-banner p {
@@ -3759,41 +3919,13 @@ img {
   @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 1000px) {
     #About-Container .about-inner-content article .about-textbox p {
       font-size: 1.1em; } }
-@media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 870px) {
-  #About-Container .about-inner-content .textbox-bg-fullWidth .about-textbox {
-    padding-top: 3.5em; } }
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  #About-Container .about-inner-content .textbox-bg-fullWidth-thin .future-ready-box {
-    top: 3.2em; } }
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 960px) and (max-width: 1999px) {
+  #About-Container .about-inner-content .about-1col .textbox-fill .about-textbox {
+    padding-top: 6em; }
+    #About-Container .about-inner-content .about-1col .textbox-fill .about-textbox h2 {
+      font-size: 1.4em; } }
+
 @media only screen and (min-width: 1200px) {
-  #About-Container .about-overlay-content .textbox-bg-fullWidth {
-    position: relative; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth:before {
-      display: block;
-      content: " ";
-      width: 100%;
-      padding-top: 29.16667%; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth > .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-  #About-Container .about-overlay-content .textbox-bg-fullWidth-thin {
-    position: relative; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin:before {
-      display: block;
-      content: " ";
-      width: 100%;
-      padding-top: 16.66667%; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin > .content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0; }
-    #About-Container .about-overlay-content .textbox-bg-fullWidth-thin .future-ready-box {
-      top: 5.2em; }
   #About-Container .about-overlay-content .about-banner h2 {
     font-size: 1.4em; }
   #About-Container .about-overlay-content .about-banner p {
@@ -6668,246 +6800,232 @@ img {
       margin-top: 0;
       margin-bottom: 0; } }
 @media only screen and (min-width: 320px) {
-  #Aelia-Container {
+  #small-Container {
     background-color: #4a4a49; }
-    #Aelia-Container .aelia-hero-container {
+    #small-Container .hero-container {
       position: relative; }
-      #Aelia-Container .aelia-hero-container .aelia-hero-headings {
+      #small-Container .hero-container .hero-heading {
         position: absolute;
         top: 90px;
         color: #fff;
         padding: 0em 0em 0em 1.45em; }
-        #Aelia-Container .aelia-hero-container .aelia-hero-headings h2 {
+        #small-Container .hero-container .hero-heading h2 {
           margin: 0;
-          padding: 0;
           text-transform: uppercase;
           font-family: portland-bold;
-          font-weight: normal;
           font-size: 2em;
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Aelia-Container .aelia-hero-container .aelia-hero-headings h2 {
+          #small-Container .hero-container .hero-heading h2 {
             font-size: 3em; } }
 @media only screen and (min-width: 320px) {
-        #Aelia-Container .aelia-hero-container .aelia-hero-headings p {
-          margin: 0;
+        #small-Container .hero-container .hero-heading p {
           margin-top: 1em;
-          padding: 0;
           font-family: portland-book;
           font-size: 1em;
           line-height: 1;
           transition: font-size 0.3s; } }
         @media only screen and (min-width: 320px) and (min-width: 500px) {
-          #Aelia-Container .aelia-hero-container .aelia-hero-headings p {
+          #small-Container .hero-container .hero-heading p {
             font-size: 1.3em; } }
 @media only screen and (min-width: 320px) {
-      #Aelia-Container .aelia-hero-container .aelia-hero-image {
-        padding-top: 74px; }
-
-  .aelia-overlay-content {
-    background-color: #e6e6e6; }
-    .aelia-overlay-content .aelia-banner {
-      margin: 0;
-      padding: 1em 1.5em;
-      background-color: #000; }
-      .aelia-overlay-content .aelia-banner p {
-        text-align: center;
-        color: #fff;
-        background-color: #000;
-        font-family: portland-book;
-        margin: 0; }
-    .aelia-overlay-content .aelia-inner-content {
-      background-color: #e6e6e6;
-      display: inline-block;
-      padding: 0.5em 1em 1em 1em; }
-      .aelia-overlay-content .aelia-inner-content article {
-        padding: 0.5em 0em; } }
-      @media only screen and (min-width: 320px) and (min-width: 400px) and (max-width: 992px) {
-        .aelia-overlay-content .aelia-inner-content article .aelia-crop {
-          height: 100%;
-          max-height: 200px; } }
-@media only screen and (min-width: 320px) {
-      .aelia-overlay-content .aelia-inner-content video {
-        width: 100%; }
-      .aelia-overlay-content .aelia-inner-content .aelia-week-summary {
-        background-color: #ffd100;
-        margin: 0;
-        padding: 2em;
-        border-radius: 25px;
-        text-align: center;
-        color: #fff;
-        font-family: portland-book;
-        font-size: 1.3em;
-        line-height: 1; }
-      .aelia-overlay-content .aelia-inner-content .column-block {
-        padding: 0em; }
-      .aelia-overlay-content .aelia-inner-content .spacing-bottom {
-        margin-bottom: 1em; }
-      .aelia-overlay-content .aelia-inner-content .aelia-abs-text {
-        position: absolute;
-        bottom: 0;
-        padding: 0;
-        margin: 0;
-        padding: 1.5em;
-        color: white;
-        font-family: portland-book;
-        font-size: 1.5em;
-        line-height: 1.1em;
-        text-transform: uppercase; }
-      .aelia-overlay-content .aelia-inner-content .aelia-abs-text-right {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0;
-        margin: 0;
-        padding: 1.5em;
-        color: white;
-        font-family: portland-book;
-        font-size: 1.5em;
-        line-height: 1.1em;
-        text-transform: uppercase;
-        text-align: right; }
-      .aelia-overlay-content .aelia-inner-content .aelia-flex-text {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 4em;
-        font-family: portland-book;
-        color: white; }
-        .aelia-overlay-content .aelia-inner-content .aelia-flex-text:nth-child(2) {
-          padding: 2em; }
-      .aelia-overlay-content .aelia-inner-content .aelia-more-text {
-        margin-top: 0em; } }
-      @media only screen and (min-width: 320px) and (min-width: 768px) {
-        .aelia-overlay-content .aelia-inner-content .aelia-more-text {
-          margin-top: 3em; } }
-@media only screen and (min-width: 320px) {
-      .aelia-overlay-content .aelia-inner-content .aelia-more {
-        flex-direction: column;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column; }
-        .aelia-overlay-content .aelia-inner-content .aelia-more button {
+    #small-Container .overlay-content {
+      background-color: #e6e6e6; }
+      #small-Container .overlay-content .banner {
+        padding: 1em 1.5em;
+        background-color: #000; }
+        #small-Container .overlay-content .banner p {
+          text-align: center;
+          color: #fff;
+          font-family: portland-book;
+          margin: 0; }
+      #small-Container .overlay-content .inner-content {
+        background-color: #e6e6e6;
+        /*	.aelia-flex-text {
+        		position: absolute;
+        		display: flex;
+        		justify-content: center;
+        		align-items: center;
+        		flex-direction: column;
+        		text-align: center;
+        		top: 0;
+        		left: 0;
+        		bottom: 0;
+        		right: 0;
+        		padding: 4em;
+        		font-family: portland-book;
+        		color: white;
+        		&:nth-child(2) {
+        			padding: 2em;
+        		}
+        	}*/
+        /*	.aelia-more-text {
+        		margin-top: 0em;
+        		@media only screen and (min-width: 768px) {
+        			margin-top: 3em;
+        		}
+        	} */ }
+        #small-Container .overlay-content .inner-content article .textbox-bg {
+          position: relative;
+          background-color: #000; }
+          #small-Container .overlay-content .inner-content article .textbox-bg:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            padding-top: 221.66667%; }
+          #small-Container .overlay-content .inner-content article .textbox-bg > .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; }
+          #small-Container .overlay-content .inner-content article .textbox-bg p {
+            text-transform: uppercase;
+            font-size: 1em;
+            margin-top: 5.5em; }
+        #small-Container .overlay-content .inner-content video {
+          width: 100%; }
+        #small-Container .overlay-content .inner-content .column-block {
+          padding: 0em;
+          position: relative;
+          overflow: hidden; }
+          #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg {
+            position: relative; }
+            #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg:before {
+              display: block;
+              content: " ";
+              width: 100%;
+              padding-top: 100%; }
+            #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg > .content {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0; }
+            #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg p {
+              margin-top: 1em; }
+        #small-Container .overlay-content .inner-content .abs-text {
+          position: absolute;
+          bottom: 0;
+          padding: 1.5em;
+          color: white;
+          font-family: portland-book;
+          font-size: 1.5em;
+          line-height: 1.1em;
+          text-transform: uppercase; }
+        #small-Container .overlay-content .inner-content .abs-text-right {
+          position: absolute;
+          top: 0;
+          right: 0;
           padding: 0;
-          border: none;
-          background: none;
-          font-family: portland-bold;
+          margin: 0;
+          padding: 1.5em;
+          color: white;
+          font-family: portland-book;
+          font-size: 1.5em;
+          line-height: 1.1em;
           text-transform: uppercase;
-          font-size: 0.7em;
-          transition: all 0.3s ease-in-out;
-          bottom: 0; }
-          .aelia-overlay-content .aelia-inner-content .aelia-more button:hover {
-            color: grey;
-            font-size: 0.75em; }
-    .aelia-overlay-content #carousel-example-generic .item {
-      margin: 0em 0.5em; }
-    .aelia-overlay-content #carousel-example-generic .carousel-indicators {
-      position: absolute;
-      top: auto;
-      bottom: 25px !important;
-      left: 46%; }
-      .aelia-overlay-content #carousel-example-generic .carousel-indicators li {
-        width: 10px !important;
-        height: 10px !important;
-        margin: 0 5px !important;
-        border: none !important; }
-        .aelia-overlay-content #carousel-example-generic .carousel-indicators li:active {
-          border: none; }
-      .aelia-overlay-content #carousel-example-generic .carousel-indicators .active {
-        width: 10px;
-        height: 10px;
-        margin-left: 5px;
-        border: none;
-        margin-top: 0;
-        margin-bottom: 0; } }
+          text-align: right; }
+        #small-Container .overlay-content .inner-content .aelia-more {
+          flex-direction: column;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column; }
+          #small-Container .overlay-content .inner-content .aelia-more button {
+            padding: 0;
+            border: none;
+            background: none;
+            font-family: portland-bold;
+            text-transform: uppercase;
+            font-size: 0.7em;
+            transition: all 0.3s ease-in-out;
+            bottom: 0; }
+            #small-Container .overlay-content .inner-content .aelia-more button:hover {
+              color: grey;
+              font-size: 0.75em; } }
 @media only screen and (min-width: 768px) {
-  #Aelia-Container .aelia-hero-container .aelia-hero-headings h2 {
-    font-size: 3.5em;
-    line-height: 1; }
-  #Aelia-Container .aelia-hero-container .aelia-hero-headings p {
-    font-size: 1.3em; }
-
-  .aelia-overlay-content .aelia-banner {
-    padding: 2em 7em; }
-    .aelia-overlay-content .aelia-banner p {
-      font-size: 1.5em; }
-  .aelia-overlay-content .aelia-inner-content {
-    padding-top: 1em; }
-    .aelia-overlay-content .aelia-inner-content article {
-      padding: 0.5em 0em; }
-    .aelia-overlay-content .aelia-inner-content video {
-      width: 100%; }
-    .aelia-overlay-content .aelia-inner-content .aelia-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .aelia-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .aelia-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .aelia-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .aelia-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
+  	/*#Aelia-Container {
+  		.aelia-hero-container {
+  			.aelia-hero-headings {
+  				h2 {
+  					font-size: 3.5em;
+  					line-height: 1;
+  				}
+  				p {
+  					font-size: 1.3em;
+  				}
+  			}
+  			.aelia-hero-image {
+  
+  			}
+  		}
+  	}*/
+  /*	.aelia-overlay-content {
+  
+  		.aelia-banner {
+  			padding: 2em 7em;
+  			p {
+  				font-size: 1.5em;
+  			}
+  		}
+  		.aelia-inner-content {
+  			padding-top: 1em;
+  			article {
+  				padding: 0.5em 0em;
+  			}
+  			video {
+  				width: 100%;
+  			}
+  			.aelia-week-summary {
+  				padding: 1.5em;
+  				font-size: 1.1em;
+  				line-height: 1.1;
+  			}
+  		}
+  
+  	}*/ }
 @media only screen and (min-width: 1200px) {
-  #Aelia-Container .aelia-hero-container .aelia-hero-headings h2 {
-    font-size: 4em;
-    line-height: 1; }
-  #Aelia-Container .aelia-hero-container .aelia-hero-headings p {
-    font-size: 1.5em; }
-
-  .aelia-overlay-content .aelia-banner {
-    padding: 3em 20em; }
-    .aelia-overlay-content .aelia-banner p {
-      font-size: 1.5em; }
-  .aelia-overlay-content .aelia-inner-content {
-    padding: 1em 5em; }
-    .aelia-overlay-content .aelia-inner-content article {
-      padding: 0.5em 0.5em; }
-    .aelia-overlay-content .aelia-inner-content video {
-      width: 100%; }
-    .aelia-overlay-content .aelia-inner-content .gcsc-week-summary {
-      padding: 1.5em;
-      font-size: 1.1em;
-      line-height: 1.1; }
-  .aelia-overlay-content #carousel-example-generic .carousel-indicators {
-    position: absolute;
-    top: auto;
-    bottom: 25px !important;
-    left: 46%; }
-    .aelia-overlay-content #carousel-example-generic .carousel-indicators li {
-      width: 10px !important;
-      height: 10px !important;
-      margin: 0 5px !important;
-      border: none !important; }
-      .aelia-overlay-content #carousel-example-generic .carousel-indicators li:active {
-        border: none; }
-    .aelia-overlay-content #carousel-example-generic .carousel-indicators .active {
-      width: 10px;
-      height: 10px;
-      margin-left: 5px;
-      border: none;
-      margin-top: 0;
-      margin-bottom: 0; } }
+  	/*#Aelia-Container {
+  			.aelia-hero-container {
+  				.aelia-hero-headings {
+  					h2 {
+  						font-size: 4em;
+  						line-height: 1;
+  					}
+  					p {
+  						font-size: 1.5em;
+  					}
+  				}
+  				.aelia-hero-image {
+  
+  				}
+  			}
+  		}
+  		.aelia-overlay-content {
+  
+  			.aelia-banner {
+  				padding: 3em 20em;
+  				p {
+  					font-size: 1.5em;
+  				}
+  			}
+  			.aelia-inner-content {
+  				padding: 1em 5em;
+  				article {
+  					padding: 0.5em 0.5em;
+  				}
+  				video {
+  					width: 100%;
+  				}
+  				.gcsc-week-summary {
+  					padding: 1.5em;
+  					font-size: 1.1em;
+  					line-height: 1.1;
+  				}
+  			}
+  
+  		}*/ }
 .home-newsletter {
   margin-top: 0.5em;
   padding: 0 2em !important;
