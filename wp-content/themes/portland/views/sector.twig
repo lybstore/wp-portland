@@ -1,0 +1,28 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+  <span class="buffer buffer-75"></span>
+  <div id="fullpage">
+    <div class="slide">
+      <article class="section">
+        <div class="work-full-bg work-content work-gradient">
+          <article class="work-headings">
+            <h2>{{sector.name}}</h2>
+            {{sectordesc}}
+          </article>
+        </div>
+      </article>
+      {% for post in posts %}
+        <article class="section">
+          <a href="{{post.link}}" style="background-image:
+            url('{{post.thumbnail.src}}');" class="work-full-bg">
+            <div class="work-headings">
+              <h2>{{post.title}}</h2>
+              <p class="work-subheading"><span class="heading--bold">WORK.</span>&nbsp;{{sector.name}}</p>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
