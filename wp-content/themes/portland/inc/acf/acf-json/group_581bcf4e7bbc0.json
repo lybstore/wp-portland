@@ -211,7 +211,15 @@
                     "type": "url",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_581bd01b034ea",
+                                "operator": "==",
+                                "value": "url"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -267,5 +275,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478228770
+    "modified": 1478229592
 }
