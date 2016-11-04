@@ -34,7 +34,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": ""
+            "default_value": "#000000"
         },
         {
             "key": "field_581c03df30f69",
@@ -60,6 +60,22 @@
             "ajax": 0,
             "return_format": "value",
             "placeholder": ""
+        },
+        {
+            "key": "field_581c0f6df4fa8",
+            "label": "Feature Project",
+            "name": "featured",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
         }
     ],
     "location": [
@@ -79,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478231050
+    "modified": 1478234146
 }

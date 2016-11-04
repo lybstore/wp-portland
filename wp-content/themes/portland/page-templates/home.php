@@ -18,7 +18,9 @@ $context['post'] = Timber::get_post();
 $context['work'] = Timber::get_posts([
 	'post_type' => 'work',
 	'posts_per_page' => 20,
-	'numberposts' => 20
+	'numberposts' => 20,
+	'orderby' => 'meta_value',
+	'meta_key' => 'featured'
 ]);
 $context['news'] = get_permalink( get_option( 'page_for_posts' ) );
 $context['newsticker'] = get_field('newsticker');
