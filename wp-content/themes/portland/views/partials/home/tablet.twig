@@ -167,7 +167,7 @@
 					</article>
 				{% endif %}
 
-				<article class="col-sm-6">
+				<article class="col-sm-6 twitter-widget">
 					{% if tweet|length > 0 %}
 						<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
 						<p>{{fn('render_tweet', tweet[0])}}</p>

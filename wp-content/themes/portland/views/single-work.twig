@@ -40,11 +40,13 @@
             {% elseif item.type == "txt" %}
               <article class="packery-item" style="width: {{item.width}}%; colour: {{text}};">
                 <div class="textbox-bg" style="background-color: {{colour}};">
+                <div>
                   <p>
                     {{item.text}}
                   </p>
+                 </div>
                 </div>
-              </div>
+              </article>
             {% elseif item.type == "gal" %}
               <div id="carousel-example-generic"
                 class="packery-item carousel slide clearfix col-md-12"

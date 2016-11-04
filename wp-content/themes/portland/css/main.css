@@ -2177,7 +2177,11 @@ img {
       .overlay-content .inner-content article {
         padding: 0.5em; }
       .overlay-content .inner-content video {
-        width: 100%; }
+        width: 100%; } }
+    @media only screen and (min-width: 320px) and (min-width: 320px) and (max-width: 1000px) {
+      .overlay-content .inner-content .packery-item {
+        width: 100% !important; } }
+@media only screen and (min-width: 320px) {
       .overlay-content .inner-content .textbox-bg {
         position: relative;
         background-color: #fed116;
@@ -2186,21 +2190,22 @@ img {
           display: block;
           content: " ";
           width: 100%;
-          padding-top: 82.5%; }
+          padding-top: 66.66667%; }
         .overlay-content .inner-content .textbox-bg > .content {
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0; }
-        .overlay-content .inner-content .textbox-bg p {
+        .overlay-content .inner-content .textbox-bg div {
           position: absolute;
           top: 0;
-          color: #fff;
           text-align: center;
-          font-size: 0.9em;
-          font-family: portland-book;
           padding: 1.5em; }
+          .overlay-content .inner-content .textbox-bg div p {
+            color: #fff;
+            font-size: 0.9em;
+            font-family: portland-book; }
         .overlay-content .inner-content .textbox-bg button {
           padding: 0;
           border: none;
