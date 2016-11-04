@@ -2,112 +2,81 @@
 
 {% block content %}
 
-  <section class="work-container">
+  <section id="bigAp-Container">
   	<div class="hero-container">
-  		<div class="hero-headings case-study-heading">
+      <div class="hero-heading">
   			<h2>{{post.title}}</h2>
   			{{post.subtitle}}
-  		</div>
-  		<div class="hero-image">
-  			<img src="{{post.thumbnail.src()}}">
-  		</div>
+		</div>
+			<img src="{{post.thumbnail.src()}}">
   	</div>
   	<section class="overlay-content">
 
-  		<div class="overlay-banner">
+  		<div class="banner-wrapper">
   			{{post.content}}
   		</div>
 
-  		<section class="inner-content">
-  				<div class="col-md-9 column-block">
-  					<div class="col-md-12">
-  						<img src="/assets/casestudies/retaildesign/luton/luton-image3.png">
-  					</div>
-  					<div class="col-md-4 curve-container">
-  						<img src="/assets/casestudies/retaildesign/luton/luton-image4.png">
-  						<div class="curve-text">
-  							We know that a rich and authentically crafted ‘Spirit of Place’ can be a key experience driver for all retail, especially airports.
-  						</div>
-  					</div>
-  					<div class="col-md-8">
-  						<img src="/assets/casestudies/retaildesign/luton/luton-image5.png">
-  					</div>
-  				</div>
-  				<div class="col-md-3 column-block">
-  					<div class="col-md-12">
-  						<div class="textbox-bg">
-  							Designed for Lagardère Travel retail Services the shopping experience captures the diversity and creative energy of London shopping.
-  						</div>
-  					</div>
-  					<div class="col-md-12">
-  						<img src="/assets/casestudies/retaildesign/luton/01-370x351.png">
-  					</div>
-  					<div class="col-md-12">
-  						<img src="/assets/casestudies/retaildesign/luton/02a-370x434.png">
-  					</div>
-  				</div>
-
-  				<div class="col-md-8 column-block">
-  					<div class="col-md-12">
-  						<img src="/assets/casestudies/retaildesign/luton/03-955x640.png">
-  					</div>
-
-  					<div class="col-md-6">
-  						<img src="/assets/casestudies/retaildesign/luton/luton-image9.png">
-  					</div>
-
-  					<div class="col-md-6">
-  						<img src="/assets/casestudies/retaildesign/luton/04-477x310.png">
-  					</div>
-  				</div>
-
-  				<div class="col-md-4 column-block">
-
-  					<div class="col-md-12">
-  						<div class="textbox-bg">
-  							As many airport stores tend to be similar, we injected a strong London personality into the shopping experience. Edgy, urban elements such as exposed brickwork and graffiti in some areas, contrasted with a highly, polished premium feel in other areas such as cosmetics. Expressing the spirit of London in a unique, appealing and sometimes slightly irreverent way.
-  						</div>
-  					</div>
-
-  					<div class="col-md-12">
-  						<img src="/assets/casestudies/retaildesign/luton/02a-370x434.png">
-  					</div>
-  				</div>
-
-  				<div class="col-md-12 column-block">
-  					<div class="col-md-3 column-block">
-
-  						<div class="col-md-12">
-  							<div class="textbox-bg">
-  								An eyecatching ceiling disc featuring a ‘punk-ed’ Union Jack flag provides a focal stage for an assortment of English brands. A showcase for English brands, from new players, to boutique offers and trusted favourites. This programmed offer pumps in the entrepreneurial buzz, newness and refreshment of the London shopping experience.
-  							</div>
-  						</div>
-
-  						<div class="col-md-12">
-  							<img src="/assets/casestudies/retaildesign/luton/luton-image11.png">
-  						</div>
-  					</div>
-
-  					<div class="col-md-9 column-block">
-  						<div class="col-md-12">
-  							<img src="/assets/casestudies/retaildesign/luton/05-1016x640.png">
-  						</div>
-  					</div>
-  				</div>
-
-  				<div class="col-md-12 column-block">
-  					<div class="col-md-6">
-  						<img src="/assets/casestudies/retaildesign/luton/luton-image14.png">
-  					</div>
-  					<div class="col-md-6">
-  						<div class="textbox-bg">
-  								“I am very proud to be a part of this exceptional new Aelia Duty Free opening at London Luton Airport. As the largest store in Lagardère Travel Retail’s global portfolio, we are thrilled to have opened such an inspiring and invigorating retail facility.” Amaury Dehen
-  								General director of store operators Lagardère Travel retail UK
-  							<button href="work-retail-design">view more retail &amp; design projects</button>
-  						</div>
-  					</div>
-  				</div>
-
+  		<div class="inner-content content-inner">
+        <div style="position: relative;" class="packery-wrap">
+          {% for item in post.get_field('items') %}
+            {% if item.type == "img" %}
+      				<article class="packery-item" style="width: {{item.width}}%">
+      					<img src="{{item.img.url}}">
+      				</article>
+            {% elseif item.type == "vid" %}
+      				<article class="packery-item video-wrapper"
+                style="width: {{item.width}}%">
+                <video poster="{{item.img.url}}">
+        					<img src="{{item.video}}">
+                </video>
+                <div class="playpause"></div>
+      				</article>
+            {% elseif item.type == "txt" %}
+              <article class="packery-item" style="width: {{item.width}}%">
+                <div class="textbox-bg">
+                  <p>
+                    {{item.text}}
+                  </p>
+                </div>
+              </div>
+            {% elseif item.type == "gal" %}
+              <div id="carousel-example-generic"
+                class="packery-item carousel slide clearfix col-md-12"
+                data-ride="carousel" style="width: {{item.width}}%">
+                <article class="block-wrap">
+                  <div class="carousel-inner" role="listbox">
+                    {% for image in item.carousel %}
+                      <div class="item{{loop.index0 == 0 ? " active" : "" }}">
+                        <img src="{{image.url}}" alt="...">
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <ol class="carousel-indicators">
+                    {% for image in item.carousel %}
+                      <li data-target="#carousel-example-generic" data-slide-to="{{loop.index0}}" class="{{loop.index0 == 0 ? " active" : "" }}"></li>
+                    {% endfor %}
+                  </ol>
+                  <button class="left carousel-control" ng-href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </button>
+                  <button class="right carousel-control" ng-href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </button>
+                </article>
+              </div>
+            {% elseif item.type == "url" %}
+      				<article class="packery-item"
+                style="width: {{item.width}}%;">
+      					<div class="textbox-bg textbox-bg-long">
+      						<p>We raised a remarkable amount for Project Waterfall and made Allegra CEO Jeff Young so happy that he’s asked to drive the next UK Coffee Week campaign, so we can carry on spreading the smiles.</p>
+      						<button href="work-market-comms">view more marketing &amp; communications projects</button>
+      					</div>
+      				</article>
+            {% endif %}
+          {% endfor %}
+        </div>
   		</section>
   	</section>
   </section>

@@ -77,3 +77,13 @@
   {% endif %}
 </script>
 {{wp_footer}}
+<script type="text/javascript">
+  var elem = document.querySelector('.packery-wrap');
+  if(elem){
+    var pckry = new Packery( elem, {
+      // options
+      itemSelector: '.packery-item',
+      gutter: 0
+    });
+  }
+</script>

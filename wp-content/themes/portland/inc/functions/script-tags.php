@@ -26,7 +26,7 @@ function chippr_scripts_and_styles() {
     }
 
 		//adding scripts file in the footer
-		wp_register_script( 'chippr-js', get_stylesheet_directory_uri() . '/js/main.bundle.js', array( 'jquery' ), '0.0.0', true );
+		wp_register_script( 'chippr-js', get_stylesheet_directory_uri() . '/scripts/packery.min.js', array(), '0.0.0', true );
 
 		// enqueue styles and scripts
 		// wp_enqueue_style( 'main-stylesheet' );
@@ -37,7 +37,7 @@ function chippr_scripts_and_styles() {
 		and your site will load faster.
 		*/
 		//wp_enqueue_script( 'jquery' );
-		// wp_enqueue_script( 'chippr-js' );
+		wp_enqueue_script( 'chippr-js' );
 
 	}
 }
