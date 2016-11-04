@@ -71,7 +71,7 @@
 				<div class="col-sm-4 grid-block">
 					<div class="grid-block-inner">
 						{% if work[3] %}
-							<article class="col-sm-6">
+							<article class="col-sm-6 right">
 								<a href="{{work[3].link}}" class="grid-block--img">
 									<img class="tile30" src="{{TimberImage(work[3].homeimg)}}">
 									<div class="grid-headings">
@@ -112,6 +112,22 @@
 								<p>{{fn('render_tweet', tweet[0])}}</p>
 							{% endif %}
 						</article>
+						<article class="col-sm-6">
+							<a href="{{work[2].link}}" class="grid-block--img">
+								<img class="tile30" src="{{TimberImage(work[2].homeimg)}}">
+								<div class="grid-headings">
+									<h2>{{work[2].title}}</h2>
+									<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[2].terms('sector')[0].name}}</p>
+								</div>
+								<div class="grid-block-hidden grid-block--blue grid-headings--back">
+									<p>
+										{{work[2].subtitle}}
+									</p>
+									<h3> view project </h3>
+								</div>
+							</a>
+						</article>
+
 					</div>
 				</div>
 
