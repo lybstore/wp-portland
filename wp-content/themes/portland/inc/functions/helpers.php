@@ -71,7 +71,7 @@ function render_tweet(array $tweet) {
 
 function my_acf_init() {
 
-	acf_update_setting('google_api_key', 'xxx');
+	acf_update_setting('google_api_key', 'AIzaSyDakXJ6-5Jat2EuY34p-hkIj3fxSu6gAg8');
 }
 
 add_action('acf/init', 'my_acf_init');

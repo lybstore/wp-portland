@@ -61,9 +61,63 @@
         },
         {
             "key": "field_58194558f47d5",
-            "label": "Featured FRQ",
-            "name": "frq",
-            "type": "post_object",
+            "label": "FRQ",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_581c0ac002d0b",
+            "label": "FRQ Title",
+            "name": "frq_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_581c0acd02d0c",
+            "label": "FRQ Content",
+            "name": "frq_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_581c0ddaf98c3",
+            "label": "FRQ Page",
+            "name": "frq_page",
+            "type": "page_link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -73,13 +127,93 @@
                 "id": ""
             },
             "post_type": [
-                "frq"
+                "page"
             ],
             "taxonomy": [],
             "allow_null": 0,
-            "multiple": 0,
-            "return_format": "object",
-            "ui": 1
+            "allow_archives": 1,
+            "multiple": 0
+        },
+        {
+            "key": "field_581c0df3f98c4",
+            "label": "News",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_581c0adb02d0d",
+            "label": "News Title",
+            "name": "news_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_581c0aeb02d0e",
+            "label": "News Image",
+            "name": "news_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_581c0dc8f98c2",
+            "label": "News Page",
+            "name": "news_page",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
@@ -99,5 +233,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478051181
+    "modified": 1478233601
 }

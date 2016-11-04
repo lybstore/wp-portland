@@ -64,7 +64,13 @@ function portlanddeps_register_required_plugins() {
 			'name'      => 'Ditty News Ticker',
 			'slug'      => 'ditty-news-ticker',
 			'required'  => true,
-			'force_activation'   => false
+			'force_activation'   => true
+		),
+		array(
+			'name'      => 'Accordion Plugin',
+			'slug'      => 'accordion-shortcode-and-widget',
+			'required'  => true,
+			'force_activation'   => true
 		),
 
 	);

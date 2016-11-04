@@ -20,10 +20,7 @@ $context['work'] = Timber::get_posts([
 	'posts_per_page' => 20,
 	'numberposts' => 20
 ]);
-$context['news'] = Timber::get_posts([
-	'posts_per_page' => 1,
-	'numberposts' => 1
-]);
+$context['news'] = get_permalink( get_option( 'page_for_posts' ) );
 $context['newsticker'] = get_field('newsticker');
 
 if(file_exists(get_stylesheet_directory().'/inc/twittercache/results.json')){

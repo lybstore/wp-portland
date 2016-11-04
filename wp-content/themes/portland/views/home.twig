@@ -135,6 +135,7 @@
 							</article>
 						{% endif %}
 
+						{% set frq = TimberPost(post.frq_page) %}
 						<article class="col-sm-2">
 							<div class="grid-block--img">
 								<button href="#" class="btn btn-lg black" data-toggle="modal" data-target="#frqModal">
@@ -152,17 +153,15 @@
 										<div class="modal-frq-logo">
 											<img src="{{theme.link}}/assets/FRQs/frq-text.png">
 										</div>
-										{% set frq = TimberPost(post.frq) %}
 										<div class="col-sm-12 right modal-subheading">
-											<h2>{{frq.title}}</h2>
-											<p style="font-family: portland-book;">
-												{{frq.content}}
-											</p>
-											<h3><span><strong>{{frq.name}}</strong>.</span>&nbsp;</span>{{frq.position}}</h3>
+											<h2>{{post.frq_title}}</h2>
+											<div style="font-family: portland-book;">
+												{{post.frq_content}}
+											</div>
 										</div>
 									</div>
 									<button class="col-sm-12 modal-button-more" type="button">
-										<a href="{frqs}}" aria-label="Close" data-target="#frqModal"><span>More FRQs</span></a>
+										<a href="{{frq.link}}" aria-label="Close" data-target="#frqModal"><span>More FRQs</span></a>
 									</button>
 								</div>
 							</div>
@@ -441,11 +440,12 @@
 	{% endif %}
 
 
+	{% set news = TimberPost(post.news_page) %}
 	<article class="col-sm-8">
-		<a href="news" class="grid-block--img">
-			<img src="{{TimberImage(news[0].homeimg).src}}">
+		<a href="{{news.link}}" class="grid-block--img">
+			<img src="{{TimberImage(post.news_img).src}}">
 			<div class="grid-headings">
-				<h2>{{news[0].title}}</h2>
+				<h2>{{post.news_title}}</h2>
 				<p><span class="heading--bold"><b>NEWS.</b></span></p>
 			</div>
 		</a>
