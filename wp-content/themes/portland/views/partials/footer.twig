@@ -4,10 +4,8 @@
 
 <!-- ANGULAR -->
 <script src="{{theme.link}}/scripts/angular.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-<script type="text/javascript" src="{{theme.link}}/scripts/angular-sanitize.min.js"></script>
-
-<!-- JQUERY -->
+<script src="{{theme.link}}/scripts/angular-ui-router.js"></script>
+<script src="{{theme.link}}/scripts/angular-sanitize.min.js"></script>
 <script src="{{theme.link}}/scripts/jquery.min.js"></script>
 
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -49,6 +47,7 @@
 
   {% if home %}
     $(function(){
+    if (window.location.hash == '/home' || !window.location.hash){
       var splashDiv = document.getElementById('splash');
       if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
         splashDiv.innerHTML = '<img id="gifImage" src="{{gif}}"/>';
@@ -66,7 +65,7 @@
             $('#videoPortland').on('ended',function(){
                 removeVideo();
             });
-          }, 7000)
+          }, 1000)
         }
     });
   {% else %}
