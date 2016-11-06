@@ -79,11 +79,13 @@
   var elem = document.querySelector('.packery-wrap');
   if(elem){
     imagesLoaded( document.querySelector('.packery-wrap'), function( instance ) {
-      var pckry = new Packery( elem, {
-        // options
-        itemSelector: '.packery-item',
-        gutter: 0
-      });
+      setTimeout(function(){
+        var pckry = new Packery( elem, {
+          // options
+          itemSelector: '.packery-item',
+          gutter: 0
+        });
+      }, 300);
     });
   }
 </script>

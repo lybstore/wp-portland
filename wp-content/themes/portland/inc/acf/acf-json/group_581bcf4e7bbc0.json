@@ -41,6 +41,40 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_581d23c16ce84",
+                    "label": "Height to width ratio (%)",
+                    "name": "top",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_581bd01b034ea",
+                                "operator": "==",
+                                "value": "txt"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_581bd01b034ea",
+                                "operator": "==",
+                                "value": "url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_581bd01b034ea",
                     "label": "type",
                     "name": "type",
@@ -275,5 +309,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478229592
+    "modified": 1478304747
 }

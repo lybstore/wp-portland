@@ -38,13 +38,15 @@
                 <div class="playpause"></div>
       				</article>
             {% elseif item.type == "txt" %}
+              {% set top = (item.top)? "padding-top: " ~ item.top ~ "%;" : "" %}
               <article class="packery-item" style="width: {{item.width}}%; colour: {{text}};">
                 <div class="textbox-bg" style="background-color: {{colour}};">
-                <div>
-                  <p>
+                  <span style="{{top}}">
+
+                  </span>
+                  <div class="content">
                     {{item.text}}
-                  </p>
-                 </div>
+                  </div>
                 </div>
               </article>
             {% elseif item.type == "gal" %}
@@ -75,11 +77,15 @@
                 </article>
               </div>
             {% elseif item.type == "url" %}
+              {% set top = (item.top)? "padding-top: " ~ item.top ~ "%;" : "" %}
       				<article class="packery-item"
                 style="width: {{item.width}}%; colour: {{text}};">
       					<div class="textbox-bg textbox-bg-long" style=" background-color: {{colour}};">
-      						<p>We raised a remarkable amount for Project Waterfall and made Allegra CEO Jeff Young so happy that he’s asked to drive the next UK Coffee Week campaign, so we can carry on spreading the smiles.</p>
-      						<button href="work-market-comms">view more marketing &amp; communications projects</button>
+                  <span style="{{top}}"></span>
+                  <div class="content">
+        						{{item.text}}
+        						<button href="{{item.link}}">{{item.link_text}}</button>
+                  </div>
       					</div>
       				</article>
             {% endif %}

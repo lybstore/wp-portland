@@ -9,10 +9,10 @@
   .grid-block {
     padding: 0em 0.2em;
     margin-bottom: 1em; }
-    .grid-block:first-child {
+    .grid-block:first-child, .grid-block:nth-child(2) {
       margin-top: 6.5em; }
 
-  .container-showTicker .grid-block:first-child {
+  .container-showTicker .grid-block:first-child, .container-showTicker .grid-block:nth-child(2) {
     margin-top: 9em; }
 
   .tile {
@@ -427,7 +427,8 @@ html.fp-enabled,
   #HomeGrid .twitter-widget {
     background-color: #000;
     padding: 2em;
-    border-radius: 25px; }
+    border-radius: 25px;
+    margin-top: 0.5em; }
     #HomeGrid .twitter-widget p {
       color: #fff;
       font-size: 0.9em;
@@ -441,7 +442,7 @@ html.fp-enabled,
         font-size: 1.1em; } }
 @media only screen and (min-width: 768px) {
   #HomeGrid .twitter-widget {
-    padding: 4em 2em; } }
+    padding: 2em; } }
 @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1110px) {
   #HomeGrid .buffer {
     height: 70px; } }
@@ -2059,7 +2060,7 @@ img {
     padding-top: 50px; }
     #bigAp-Container .hero-container {
       position: relative;
-      max-height: 600px;
+      max-height: 550px;
       overflow: hidden; }
       #bigAp-Container .hero-container .hero-heading {
         position: absolute;
@@ -2186,9 +2187,8 @@ img {
         position: relative;
         background-color: #fed116;
         border-radius: 25px; }
-        .overlay-content .inner-content .textbox-bg:before {
+        .overlay-content .inner-content .textbox-bg span {
           display: block;
-          content: " ";
           width: 100%;
           padding-top: 66.66667%; }
         .overlay-content .inner-content .textbox-bg > .content {
@@ -2223,9 +2223,8 @@ img {
             font-size: 0.85em; }
       .overlay-content .inner-content .textbox-bg-long {
         position: relative; }
-        .overlay-content .inner-content .textbox-bg-long:before {
+        .overlay-content .inner-content .textbox-bg-long span {
           display: block;
-          content: " ";
           width: 100%;
           padding-top: 49.16667%; }
         .overlay-content .inner-content .textbox-bg-long > .content {
@@ -3677,9 +3676,8 @@ img {
   #Medium-Container .textbox-bg {
     background-color: #000;
     position: relative; }
-    #Medium-Container .textbox-bg:before {
+    #Medium-Container .textbox-bg span {
       display: block;
-      content: " ";
       width: 100%;
       padding-top: 56.66667%; }
     #Medium-Container .textbox-bg > .content {
@@ -3718,9 +3716,8 @@ img {
     padding: 0.5em; }
     #Medium-Container article .textbox-bg {
       position: relative; }
-      #Medium-Container article .textbox-bg:before {
+      #Medium-Container article .textbox-bg span {
         display: block;
-        content: " ";
         width: 100%;
         padding-top: 57.5%; }
       #Medium-Container article .textbox-bg > .content {
@@ -3740,9 +3737,8 @@ img {
       padding: 0.5em; }
       #Medium-Container .column-block article .textbox-bg {
         position: relative; }
-        #Medium-Container .column-block article .textbox-bg:before {
+        #Medium-Container .column-block article .textbox-bg span {
           display: block;
-          content: " ";
           width: 100%;
           padding-top: 82.5%; }
         #Medium-Container .column-block article .textbox-bg > .content {
@@ -3777,9 +3773,8 @@ img {
         text-align: center;
         position: relative;
         background-color: #c8c8c9; }
-        #About-Container .about-overlay-content .textbox-fill:before {
+        #About-Container .about-overlay-content .textbox-fill span {
           display: block;
-          content: " ";
           width: 100%;
           padding-top: 62.5%; }
         #About-Container .about-overlay-content .textbox-fill > .content {
@@ -3858,9 +3853,8 @@ img {
         text-align: center;
         position: relative;
         background-color: #c8c8c9; }
-        #About-Container .about-inner-content .about-1col .textbox-fill:before {
+        #About-Container .about-inner-content .about-1col .textbox-fill span {
           display: block;
-          content: " ";
           width: 100%;
           padding-top: 25.83333%; }
         #About-Container .about-inner-content .about-1col .textbox-fill > .content {
@@ -6874,9 +6868,8 @@ img {
         #small-Container .overlay-content .inner-content article .textbox-bg {
           position: relative;
           background-color: #000; }
-          #small-Container .overlay-content .inner-content article .textbox-bg:before {
+          #small-Container .overlay-content .inner-content article .textbox-bg span {
             display: block;
-            content: " ";
             width: 100%;
             padding-top: 221.66667%; }
           #small-Container .overlay-content .inner-content article .textbox-bg > .content {
@@ -6897,9 +6890,8 @@ img {
           overflow: hidden; }
           #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg {
             position: relative; }
-            #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg:before {
+            #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg span {
               display: block;
-              content: " ";
               width: 100%;
               padding-top: 100%; }
             #small-Container .overlay-content .inner-content .column-block:nth-child(3) article .textbox-bg > .content {
