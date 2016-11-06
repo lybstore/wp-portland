@@ -45,10 +45,10 @@ class WoodChippr extends TimberSite {
 		include_once 'inc/functions/init-theme.php';
 
 		/* CHIPPR post_types: FRQs */
-    include_once 'inc/post_type/frq.php';
+    // include_once 'inc/post_type/frq.php';
 
 		/* CHIPPR post_types: News */
-    include_once 'inc/post_type/news.php';
+    // include_once 'inc/post_type/news.php';
 
 		/* CHIPPR post_types: News */
 		include_once 'inc/post_type/work.php';
