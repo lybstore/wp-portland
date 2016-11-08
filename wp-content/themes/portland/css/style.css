@@ -1978,7 +1978,7 @@ body > div.page > div > div:nth-child(4) > div.parent-container > div.animation-
 }
 
 a.md-default-theme:not(.md-button), a:not(.md-button), a.md-default-theme:hover {
-    color: white !important;
+    color: white;
     text-decoration: none !important;
 }
 

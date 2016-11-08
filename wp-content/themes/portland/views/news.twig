@@ -4,7 +4,7 @@
 	<section id="News-Section" class="gradient content">
 		<div class="inner-content">
 			{% for post in posts %}
-				<div class="accordion" role="tablist" aria-multiselectable="true">
+				<div class="accordion" role="tablist" id="heading{{loop.index}}" aria-multiselectable="true">
 					<div class="panel panel-default">
 						<!-- PANEL STARTS HERE -->
 						{% if loop.index0 == 0 %}

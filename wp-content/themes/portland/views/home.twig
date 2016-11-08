@@ -49,21 +49,22 @@
 							</a>
 						</article>
 						{% if work[1] %}
-							<article class="col-sm-6">
-								<a href="{{work[1].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[1].homeimg).src}}">
+							<article class="col-sm-6 right left-align">
+								<a href="{{work[4].link}}" class="grid-block--img">
+									<img class="tile30" src="{{TimberImage(work[4].homeimg)}}">
 									<div class="grid-headings">
-										<h2>{{work[1].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[1].terms('sector')[0].name}}</p>
+										<h2>{{work[4].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[4].terms('sector')[0].name}}</p>
 									</div>
-									<div class="grid-block-hidden grid-block--black grid-headings--back">
+									<div class="grid-block-hidden grid-block--green grid-headings--back">
 										<p>
-											{{work[1].subtitle}}
+											{{work[4].subtitle}}
 										</p>
-										<h3> view project</h3>
+										<h3> view project </h3>
 									</div>
 								</a>
 							</article>
+
 						{% endif %}
 					</div>
 				</div>
@@ -89,29 +90,7 @@
 						{% endif %}
 
 						{% if work[4] %}
-							<article class="col-sm-6 right left-align">
-								<a href="{{work[4].link}}" class="grid-block--img">
-									<img class="tile30" src="{{TimberImage(work[4].homeimg)}}">
-									<div class="grid-headings">
-										<h2>{{work[4].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[4].terms('sector')[0].name}}</p>
-									</div>
-									<div class="grid-block-hidden grid-block--green grid-headings--back">
-										<p>
-											{{work[4].subtitle}}
-										</p>
-										<h3> view project </h3>
-									</div>
-								</a>
-							</article>
-						{% endif %}
-
-						<article class="col-sm-6 twitter-widget">
-							{% if tweet|length > 0 %}
-								<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
-								<p>{{fn('render_tweet', tweet[0])}}</p>
-							{% endif %}
-						</article>
+						
 						<article class="col-sm-6">
 							<a href="{{work[2].link}}" class="grid-block--img">
 								<img class="tile30" src="{{TimberImage(work[2].homeimg)}}">
@@ -127,7 +106,16 @@
 								</div>
 							</a>
 						</article>
-
+						
+						<article class="col-sm-6 twitter-widget">
+							{% if tweet|length > 0 %}
+								<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
+								<p>{{fn('render_tweet', tweet[0])}}</p>
+							{% endif %}
+						</article>
+							
+						{% endif %}
+						
 					</div>
 				</div>
 
@@ -136,23 +124,6 @@
 					<div class="grid-block-inner">
 						{% if work[2] %}
 							<article class="col-sm-2">
-								<a href="{{work[2].link}}" class="grid-block--img">
-									<img class="tile30" src="{{TimberImage(work[2].homeimg)}}">
-									<div class="grid-headings">
-										<h2>{{work[2].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[2].terms('sector')[0].name}}</p>
-									</div>
-									<div class="grid-block-hidden grid-block--blue grid-headings--back">
-										<p>
-											{{work[2].subtitle}}
-										</p>
-										<h3> view project </h3>
-									</div>
-								</a>
-							</article>
-						{% endif %}
-
-						<article class="col-sm-2">
 							<div class="grid-block--img">
 								<button href="#" class="btn btn-lg black" data-toggle="modal" data-target="#frqModal">
 									<img src="{{theme.link}}/assets/FRQs/frq.gif">
@@ -185,8 +156,28 @@
 							</div>
 						</div>
 
-						{% if work[5] %}
-							<article class="col-sm-4">
+
+							<!--<article class="col-sm-2">
+								<a href="{{work[2].link}}" class="grid-block--img">
+									<img class="tile30" src="{{TimberImage(work[2].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[2].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[2].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--blue grid-headings--back">
+										<p>
+											{{work[2].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>-->
+						{% endif %}
+						
+						
+
+							{% if work[5] %}
+							<article class="col-sm-2">
 								<a href="{{work[5].link}}" class="grid-block--img">
 									<img src="{{TimberImage(work[5].homeimg)}}">
 									<div class="grid-headings">
@@ -202,9 +193,10 @@
 								</a>
 							</article>
 						{% endif %}
+						
 
 						{% if work[7] %}
-							<article class="col-sm-2">
+							<article class="col-sm-4">
 								<a href="{{work[7].link}}" class="grid-block--img">
 									<img src="{{TimberImage(work[7].homeimg)}}">
 									<div class="grid-headings">
@@ -220,6 +212,7 @@
 								</a>
 							</article>
 						{% endif %}
+						
 
 						{% if work[8] %}
 							<article class="col-sm-2">
@@ -238,16 +231,85 @@
 								</a>
 							</article>
 						{% endif %}
-					</div>
-				</div>
-
-				<div class="col-sm-6 grid-block">
-					<div class="grid-block-inner">
+						
+						{% if work[9] %}
+							<article class="col-sm-2">
+								<a href="{{work[9].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[9].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[9].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[9].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--orange grid-headings--back">
+										<p>
+											{{work[9].subtitle}}
+										</p>
+										<h3> view project</h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+						
+						
+												
+						{% if work[11] %}
+							<article class="col-sm-4 offset-sm-4 right left-align">
+								<a href="{{work[11].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[11].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[11].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[11].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--light-grey grid-headings--back">
+										<p>
+											{{work[11].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+						
+						
+						{% if work[10] %}
+							<!--<article class="col-sm-4">
+								<a href="{{work[10].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[10].homeimg_mob)}}">
+									<div class="grid-headings">
+										<h2>{{work[10].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[10].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--dark-black grid-headings--back">
+										<p>
+											{{work[10].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>-->
+							<article class="col-sm-4">
+								<a href="{{work[1].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[1].homeimg).src}}">
+									<div class="grid-headings">
+										<h2>{{work[1].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[1].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--black grid-headings--back">
+										<p>
+											{{work[1].subtitle}}
+										</p>
+										<h3> view project</h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+						
+												
 						{% if work[6] %}
-							<article class="col-sm-8">
+							<article class="col-sm-2">
 								<a href="{{work[6].link}}" class="grid-block--img">
 									<img src="{{TimberImage(work[6].homeimg)}}">
-									<div class="grid-headings grid-headings--big">
+									<div class="grid-headings">
 										<h2>{{work[6].title}}</h2>
 										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[6].terms('sector')[0].name}}</p>
 									</div>
@@ -260,7 +322,82 @@
 								</a>
 							</article>
 						{% endif %}
+						
+						
+						{% if work[15] %}
+						
+						<article class="col-sm-2">
+							<a href="{{work[15].link}}" class="grid-block--img">
+								<img src="{{TimberImage(work[15].homeimg)}}">
+								<div class="grid-headings">
+									<h2>{{work[15].title}}</h2>
+									<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[15].terms('sector')[0].name}}</p>
+								</div>
+								<div class="grid-block-hidden grid-block--pink grid-headings--back">
+									<p>
+										{{work[15].subtitle}}
+									</p>
+									<h3> view project </h3>
+								</div>
+							</a>
+						</article>
 
+						{% endif %}
+						
+						
+						{% if work[12] %}
+							<article class="col-sm-2 left-align">
+								<a href="{{work[12].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[12].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[12].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[12].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--light-grey grid-headings--back">
+										<p>
+											{{work[12].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+						
+				
+						
+						{% if work[14] %}
+							<article class="col-sm-2 right left-align">
+								<a href="{{work[14].link}}" class="grid-block--img">
+									<img class="tile30" src="{{TimberImage(work[14].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[14].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[14].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--dark-black grid-headings--back">
+										<p>
+											{{work[14].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+						
+
+						
+						{% if work[15] %}
+						<article class="col-sm-4">
+							<a href="news" class="grid-block--img">
+								<img src="{{TimberImage(news[0].homeimg).src}}">
+								<div class="grid-headings">
+									<h2>{{news[0].title}}</h2>
+									<p><span class="heading--bold"><b>NEWS.</b></span></p>
+								</div>
+							</a>
+						</article>
+						{% endif %}
+						
+						
 						{% if work[13] %}
 							<article class="col-sm-4">
 								<a href="{{work[13].link}}" class="grid-block--img">
@@ -277,19 +414,25 @@
 									</div>
 								</a>
 							</article>
-						{% endif %}
+						{% endif %}		
+														
+					</div>
+				</div>
 
-						{% if work[12] %}
-							<article class="col-sm-4 offset-sm-4 right left-align">
-								<a href="{{work[12].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[12].homeimg)}}">
+				<div class="col-sm-6 grid-block">
+					<div class="grid-block-inner">
+					
+						{% if work[16] %}
+							<article class="col-sm-4 ">
+								<a href="{{work[16].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[16].homeimg)}}">
 									<div class="grid-headings">
-										<h2>{{work[12].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[12].terms('sector')[0].name}}</p>
+										<h2>{{work[16].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[16].terms('sector')[0].name}}</p>
 									</div>
-									<div class="grid-block-hidden grid-block--light-grey grid-headings--back">
+									<div class="grid-block-hidden grid-block--markafoni grid-headings--back">
 										<p>
-											{{work[12].subtitle}}
+											{{work[16].subtitle}}
 										</p>
 										<h3> view project </h3>
 									</div>
@@ -297,53 +440,18 @@
 							</article>
 						{% endif %}
 
-						{% if work[11] %}
+						
+						{% if work[17] %}
 							<article class="col-sm-8">
-								<a href="{{work[11].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[11].homeimg)}}">
+								<a href="{{work[17].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[17].homeimg)}}">
 									<div class="grid-headings">
 										<h2>{{work[11].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[11].terms('sector')[0].name}}</p>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[17].terms('sector')[0].name}}</p>
 									</div>
 									<div class="grid-block-hidden grid-block--gold grid-headings--back">
 										<p>
-											{{work[11].subtitle}}
-										</p>
-										<h3> view project </h3>
-									</div>
-								</a>
-							</article>
-						{% endif %}
-
-						{% if work[18] %}
-							<article class="col-sm-8" style="padding: 0.5em;">
-								<a href="{{work[18].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[18].homeimg_mob)}}">
-									<div class="grid-headings">
-										<h2>{{work[18].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[18].terms('sector')[0].name}}</p>
-									</div>
-									<div class="grid-block-hidden grid-block--black grid-headings--back">
-										<p>
-											{{work[18].subtitle}}
-										</p>
-										<h3> view project </h3>
-									</div>
-								</a>
-							</article>
-						{% endif %}
-
-						{% if work[15] %}
-							<article class="col-sm-4">
-								<a href="{{work[15].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[15].homeimg)}}">
-									<div class="grid-headings">
-										<h2>{{work[15].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[15].terms('sector')[0].name}}</p>
-									</div>
-									<div class="grid-block-hidden grid-block--pink grid-headings--back">
-										<p>
-											{{work[15].subtitle}}
+											{{work[17].subtitle}}
 										</p>
 										<h3> view project </h3>
 									</div>
@@ -352,9 +460,30 @@
 						{% endif %}
 					</div>
 				</div>
+				
+					
+						
 
 				<div class="col-sm-6 grid-block">
 					<div class="grid-block-inner">
+						{% if work[19] %}
+							<article class="col-sm-4">
+								<a href="{{work[19].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[15].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[19].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[19].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--pink grid-headings--back">
+										<p>
+											{{work[19].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+
 						{% if work[19] %}
 							<article class="col-sm-4">
 								<a href="{{work[19].link}}" class="grid-block--img">
@@ -373,188 +502,13 @@
 							</article>
 						{% endif %}
 
-						<!--	<article class="col-sm-4 cursor" data-toggle="modal" data-target="#HomeNewsletter">
-						<a class="grid-block--img">
-						<img src="/assets/homepage/Joining-the-dots.gif">
-					</a>
-				</article>
-				<div class="modal fade" id="HomeNewsletter" tabindex="-1" aria-labelledby="HomeNewsletter" aria-hidden="true">
-				<div class="modal-content">
-				<button type="button" class="modal-button" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true" class="modal-button-close">&times;</span>
-			</button>
-			<article class="col-sm-12 home-newsletter">
-			<form id="mc-embedded-subscribe-form"
-			name="mc-embedded-subscribe-form"
-			action="//portlanddesigndev.us14.list-manage.com/subscribe/post?u=10b45670dff8d74a42658ada9&amp;id=fb24ba2040"
-			method="post"
-			novalidate>
-			<h4>Sign up to Joining The Dots</h4>
-			<div class="form-group newsletter-form">
-			<input name="FNAME" value="" type="text" id="mce-FNAME" placeholder="Name">
-		</div>
-		<div class="form-group newsletter-form">
-		<input name="EMAIL" value="" type="email" placeholder="Email" class="required email" id="mce-EMAIL">
-	</div>
-	<div class="form-group newsletter-form">
-	<input class="submit" type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
-	</div>
-	</form>
-	</article>
-	</div>
-	</div> -->
-
-	{% if work[9] %}
-		<article class="col-sm-8">
-			<a href="{{work[9].link}}" class="grid-block--img">
-				<img src="{{TimberImage(work[9].homeimg)}}">
-				<div class="grid-headings">
-					<h2>{{work[9].title}}</h2>
-					<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[9].terms('sector')[0].name}}</p>
-				</div>
-				<div class="grid-block-hidden grid-block--orange grid-headings--back">
-					<p>
-						{{work[9].subtitle}}
-					</p>
-					<h3> view project</h3>
-				</div>
-			</a>
-		</article>
-	{% endif %}
-
-	<!--<article class="col-sm-4 right left-align">
-	<a href="kef" class="grid-block--img">
-	<img src="/assets/homepage/homepage-tile22.png">
-	<div class="grid-headings">
-	<h2>enchanted<br/>journeys<br/>stimulate<br/>revenue</h2>
-	<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;Transport</p>
-	</div>
-	<div class="grid-block-hidden grid-block--nightblue grid-headings--back">
-	<p>
-	Keflavik International Airport, Iceland: Re-imagining
-	the International Departures Lounge
-	</p>
-	<h3> view project </h3>
-	</div>
-	</a>
-	</article>-->
-
-	{% if work[14] %}
-		<article class="col-sm-4 right left-align">
-			<a href="{{work[14].link}}" class="grid-block--img">
-				<img class="tile30" src="{{TimberImage(work[14].homeimg)}}">
-				<div class="grid-headings">
-					<h2>{{work[14].title}}</h2>
-					<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[14].terms('sector')[0].name}}</p>
-				</div>
-				<div class="grid-block-hidden grid-block--dark-black grid-headings--back">
-					<p>
-						{{work[14].subtitle}}
-					</p>
-					<h3> view project </h3>
-				</div>
-			</a>
-		</article>
-	{% endif %}
+			
 
 
-	<article class="col-sm-8">
-		<a href="news" class="grid-block--img">
-			<img src="{{TimberImage(news[0].homeimg).src}}">
-			<div class="grid-headings">
-				<h2>{{news[0].title}}</h2>
-				<p><span class="heading--bold"><b>NEWS.</b></span></p>
-			</div>
-		</a>
-	</article>
 
-	<!--<article class="col-sm-4 offset-sm-4 right">
-	<a href="al-maryah-island" class="grid-block--img">
-	<img src="/assets/homepage/home-tile17.png">
-	<div class="grid-headings">
-	<h2>sign<br/>of the<br/>times</h2>
-	<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;Signage and Wayfinding</p>
-	</div>
-	<div class="grid-block-hidden grid-block--light-grey grid-headings--back">
-	<p>
-	An unlimited opportunity for
-	signage and placemaking
-	</p>
-	<h3> view project </h3>
-	</div>
-	</a>
-	</article>-->
 
-	<!--<article class="col-sm-4">
-	<a href="wolford" class="grid-block--img">
-	<img class="tile30" src="/assets/homepage/Wolford-New-Homepage.png">
-	<div class="grid-headings">
-	<h2>luxury<br/>fashion<br/>re-imagined</h2>
-	<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;Strategic Insights</p>
-	</div>
-	<div class="grid-block-hidden grid-block--dark-black grid-headings--back">
-	<p>
-	Testing Wolford's positioning
-	to open up unexplored markets
-	</p>
-	<h3> view project </h3>
-	</div>
-	</a>
-	</article>-->
 
-	{% if work[17] %}
-		<article class="col-sm-8" style="float: right;">
-			<a href="{{work[17].link}}" class="grid-block--img">
-				<img src="{{TimberImage(work[17].homeimg_mob)}}">
-				<div class="grid-headings">
-					<h2>{{work[17].title}}</h2>
-					<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[17].terms('sector')[0].name}}</p>
-				</div>
-				<div class="grid-block-hidden grid-block-britishland grid-headings--back">
-					<p>
-						{{work[17].subtitle}}
-					</p>
-					<h3> view project</h3>
-				</div>
-			</a>
-		</article>
-	{% endif %}
 
-	{% if work[10] %}
-		<article class="col-sm-4">
-			<a href="{{work[10].link}}" class="grid-block--img">
-				<img src="{{TimberImage(work[10].homeimg_mob)}}">
-				<div class="grid-headings">
-					<h2>{{work[10].title}}</h2>
-					<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[10].terms('sector')[0].name}}</p>
-				</div>
-				<div class="grid-block-hidden grid-block--dark-black grid-headings--back">
-					<p>
-						{{work[10].subtitle}}
-					</p>
-					<h3> view project </h3>
-				</div>
-			</a>
-		</article>
-	{% endif %}
-
-	{% if work[16] %}
-		<article class="col-sm-8">
-			<a href="{{work[16].link}}" class="grid-block--img">
-				<img src="{{TimberImage(work[16].homeimg)}}">
-				<div class="grid-headings">
-					<h2>{{work[16].title}}</h2>
-					<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[16].terms('sector')[0].name}}</p>
-				</div>
-				<div class="grid-block-hidden grid-block--markafoni grid-headings--back">
-					<p>
-						{{work[16].subtitle}}
-					</p>
-					<h3> view project </h3>
-				</div>
-			</a>
-		</article>
-	{% endif %}
 	</div>
 	</div>
 	</section>
