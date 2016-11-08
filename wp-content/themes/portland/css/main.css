@@ -9,10 +9,10 @@
   .grid-block {
     padding: 0em 0.2em;
     margin-bottom: 1em; }
-    .grid-block:first-child, .grid-block:nth-child(2) {
+    .grid-block:first-child {
       margin-top: 6.5em; }
 
-  .container-showTicker .grid-block:first-child, .container-showTicker .grid-block:nth-child(2) {
+  .container-showTicker .grid-block:first-child {
     margin-top: 9em; }
 
   .tile {
@@ -95,12 +95,16 @@
   .container {
     max-width: 1815px !important;
     width: 100%;
-    margin-top: 0em !important; }
+    margin-top: 0em !important;
+    padding-left: 0.3em;
+    padding-right: 0.3em; }
 
   .grid-block {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: -0.3em; }
+    .grid-block:nth-child(2) {
+      margin-top: 6.5em; }
     .grid-block .grid-block-inner {
       display: block;
       width: 100%; }
@@ -110,7 +114,10 @@
       padding: 0.5em;
       display: block; }
     .grid-block:nth-child(3) {
-      display: flex; } }
+      display: flex; }
+
+  .container-showTicker .grid-block:nth-child(2) {
+    margin-top: 9em; } }
 html.fp-enabled,
 .fp-enabled body {
   margin: 0;
@@ -1001,7 +1008,7 @@ img {
     background: linear-gradient(0deg, #4a4a49 30%, lightgrey); }
 
   .inner-content {
-    padding: 10em 2em 2.5em; }
+    padding: 10em 1.5em 2.5em; }
 
   .panel-heading-date {
     width: 95px;
@@ -1011,18 +1018,23 @@ img {
     color: #fff; }
 
   .accordion .playpause {
-    width: 80px;
-    height: 80px; }
+    width: 40px;
+    height: 80px;
+    top: 34%; }
   .accordion:last-child {
     padding-bottom: 0.8em; }
 
   .panel-frq span {
     display: inline-block;
-    margin-top: 2.5em;
+    margin-top: 1em;
     margin-left: 0.5em;
-    font-size: 0.8em;
-    max-width: 530px;
-    width: 100%; }
+    font-size: 1em;
+    max-width: 240px;
+    width: 100%; } }
+  @media only screen and (min-width: 320px) and (min-width: 500px) {
+    .panel-frq span {
+      max-width: 400px; } }
+@media only screen and (min-width: 320px) {
   .panel-frq strong {
     float: left;
     padding-right: 0.7em;
@@ -1157,40 +1169,6 @@ img {
     #News-Section .panel-news article {
       font-size: 1em; } }
 
-	/*.wpsm_panel-default {
-		background-color: transparent;
-	}
-
-	.wpsm_panel-group {
-		margin-bottom: 0;
-	}
-
-	#wpsm_accordion_915 {
-		padding: 2em;
-
-		.wpsm_panel-title {
-			position: relative;
-		}
-
-		 .ac_open_cl_icon {
-			 background-color: #000 !important;
-			 border: none !important;
-			 margin-left: -45px !important;
-			 border-radius: 0px !important;
-		 }
-
-		 .ac_title_class {
-			 border: none;
-			 font-family: portland-book;
-			 font-weight: normal;
-			 font-size: 0.9em;
-		 }
-
-	}*/
-/*@media only screen and (min-width: 768px) {
-/*	#wpsm_accordion_915 {
-		padding: 5em;
-	}*/
 @media only screen and (min-width: 768px) {
   .accordion {
     width: 735px;
@@ -1199,13 +1177,21 @@ img {
   .panel-collapse p:nth-child(2) {
     padding-right: 2em; }
 
+  .panel-frq span {
+    max-width: 460px; }
+
   .accordion-panel-title {
     max-width: 597px;
     margin-left: 1em; }
     .accordion-panel-title article {
       margin-top: 2em; }
     .accordion-panel-title span p {
-      margin-top: 1.3em; } }
+      margin-top: 1.3em; }
+
+  .accordion .playpause {
+    width: 60px;
+    height: 80px;
+    top: 0%; } }
 @media only screen and (min-width: 1360px) {
   .accordion:first-child {
     padding-top: 90px; } }
@@ -2435,6 +2421,37 @@ img {
         #About-Container .about-inner-content .about-1col .textbox-fill {
           padding-top: 7.5em; } }
 @media only screen and (min-width: 320px) {
+      #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill {
+        position: relative; }
+        #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill:before {
+          display: block;
+          content: " ";
+          width: 100%;
+          padding-top: 50%; }
+        #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill > .content {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 470px) {
+        #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill {
+          position: relative; }
+          #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill:before {
+            display: block;
+            content: " ";
+            width: 100%;
+            padding-top: 76.66667%; }
+          #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill > .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0; } }
+      @media only screen and (min-width: 320px) and (min-width: 769px) {
+        #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill .about-textbox {
+          padding-top: 7em; } }
+@media only screen and (min-width: 320px) {
       #About-Container .about-inner-content .column-block {
         padding-left: 0em;
         padding-right: 0em; }
@@ -2475,6 +2492,20 @@ img {
   @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 1000px) {
     #About-Container .about-inner-content article .about-textbox p {
       font-size: 1.1em; } }
+@media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 960px) {
+  #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill {
+    position: relative; }
+    #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill:before {
+      display: block;
+      content: " ";
+      width: 100%;
+      padding-top: 25.83333%; }
+    #About-Container .about-inner-content .about-1col:nth-child(2n+1) .textbox-fill > .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; } }
 @media only screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 960px) and (max-width: 1999px) {
   #About-Container .about-inner-content .about-1col .textbox-fill .about-textbox {
     padding-top: 6em; }
