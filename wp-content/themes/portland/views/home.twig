@@ -90,7 +90,7 @@
 						{% endif %}
 
 						{% if work[4] %}
-						
+
 						<article class="col-sm-6">
 							<a href="{{work[2].link}}" class="grid-block--img">
 								<img class="tile30" src="{{TimberImage(work[2].homeimg)}}">
@@ -106,16 +106,16 @@
 								</div>
 							</a>
 						</article>
-						
+
 						<article class="col-sm-6 twitter-widget">
 							{% if tweet|length > 0 %}
 								<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
 								<p>{{fn('render_tweet', tweet[0])}}</p>
 							{% endif %}
 						</article>
-							
+
 						{% endif %}
-						
+
 					</div>
 				</div>
 
@@ -142,15 +142,15 @@
 										</div>
 										{% set frq = TimberPost(post.frq) %}
 										<div class="col-sm-12 right modal-subheading">
-											<h2>{{frq.title}}</h2>
+											<h2>{{post.frq_title}}</h2>
 											<p style="font-family: portland-book;">
-												{{frq.content}}
+												{{post.frq_content}}
 											</p>
-											<h3><span><strong>{{frq.name}}</strong>.</span>&nbsp;</span>{{frq.position}}</h3>
+											{#}<h3><span><strong>{{frq.name}}</strong>.</span>&nbsp;</span>{{frq.position}}</h3>#}
 										</div>
 									</div>
 									<button class="col-sm-12 modal-button-more" type="button">
-										<a href="{frqs}}" aria-label="Close" data-target="#frqModal"><span>More FRQs</span></a>
+										<a href="{{post.frq_page}}" aria-label="Close" data-target="#frqModal"><span>More FRQs</span></a>
 									</button>
 								</div>
 							</div>
@@ -173,8 +173,8 @@
 								</a>
 							</article>-->
 						{% endif %}
-						
-						
+
+
 
 							{% if work[5] %}
 							<article class="col-sm-2">
@@ -193,7 +193,7 @@
 								</a>
 							</article>
 						{% endif %}
-						
+
 
 						{% if work[7] %}
 							<article class="col-sm-4">
@@ -212,7 +212,7 @@
 								</a>
 							</article>
 						{% endif %}
-						
+
 
 						{% if work[8] %}
 							<article class="col-sm-2">
@@ -231,7 +231,7 @@
 								</a>
 							</article>
 						{% endif %}
-						
+
 						{% if work[9] %}
 							<article class="col-sm-2">
 								<a href="{{work[9].link}}" class="grid-block--img">
@@ -249,9 +249,9 @@
 								</a>
 							</article>
 						{% endif %}
-						
-						
-												
+
+
+
 						{% if work[11] %}
 							<article class="col-sm-4 offset-sm-4 right left-align">
 								<a href="{{work[11].link}}" class="grid-block--img">
@@ -269,8 +269,8 @@
 								</a>
 							</article>
 						{% endif %}
-						
-						
+
+
 						{% if work[10] %}
 							<!--<article class="col-sm-4">
 								<a href="{{work[10].link}}" class="grid-block--img">
@@ -303,8 +303,8 @@
 								</a>
 							</article>
 						{% endif %}
-						
-												
+
+
 						{% if work[6] %}
 							<article class="col-sm-2">
 								<a href="{{work[6].link}}" class="grid-block--img">
@@ -322,10 +322,10 @@
 								</a>
 							</article>
 						{% endif %}
-						
-						
+
+
 						{% if work[15] %}
-						
+
 						<article class="col-sm-2">
 							<a href="{{work[15].link}}" class="grid-block--img">
 								<img src="{{TimberImage(work[15].homeimg)}}">
@@ -343,8 +343,8 @@
 						</article>
 
 						{% endif %}
-						
-						
+
+
 						{% if work[12] %}
 							<article class="col-sm-2 left-align">
 								<a href="{{work[12].link}}" class="grid-block--img">
@@ -362,9 +362,9 @@
 								</a>
 							</article>
 						{% endif %}
-						
-				
-						
+
+
+
 						{% if work[14] %}
 							<article class="col-sm-2 right left-align">
 								<a href="{{work[14].link}}" class="grid-block--img">
@@ -382,22 +382,17 @@
 								</a>
 							</article>
 						{% endif %}
-						
 
-						
-						{% if work[15] %}
 						<article class="col-sm-4">
 							<a href="news" class="grid-block--img">
-								<img src="{{TimberImage(news[0].homeimg).src}}">
+								<img src="{{TimberImage(post.news_img).src}}">
 								<div class="grid-headings">
-									<h2>{{news[0].title}}</h2>
+									<h2>{{post.news_title}}</h2>
 									<p><span class="heading--bold"><b>NEWS.</b></span></p>
 								</div>
 							</a>
 						</article>
-						{% endif %}
-						
-						
+
 						{% if work[13] %}
 							<article class="col-sm-4">
 								<a href="{{work[13].link}}" class="grid-block--img">
@@ -414,14 +409,14 @@
 									</div>
 								</a>
 							</article>
-						{% endif %}		
-														
+						{% endif %}
+
 					</div>
 				</div>
 
 				<div class="col-sm-6 grid-block">
 					<div class="grid-block-inner">
-					
+
 						{% if work[16] %}
 							<article class="col-sm-4 ">
 								<a href="{{work[16].link}}" class="grid-block--img">
@@ -440,7 +435,7 @@
 							</article>
 						{% endif %}
 
-						
+
 						{% if work[17] %}
 							<article class="col-sm-8">
 								<a href="{{work[17].link}}" class="grid-block--img">
@@ -460,9 +455,9 @@
 						{% endif %}
 					</div>
 				</div>
-				
-					
-						
+
+
+
 
 				<div class="col-sm-6 grid-block">
 					<div class="grid-block-inner">
@@ -502,7 +497,7 @@
 							</article>
 						{% endif %}
 
-			
+
 
 
 

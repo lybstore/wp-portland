@@ -9,6 +9,7 @@
   			{{post.subtitle}}
 		</div>
 			<img src="{{post.thumbnail.src()}}">
+      {{TimberImage(post.mobile_hero).src}}
   	</div>
   	<section class="overlay-content">
 
@@ -25,6 +26,11 @@
           {% endif %}
           {% set colour = post.colour %}
           {% for item in post.get_field('items') %}
+            {% if item.text_alignment %}
+              {% set alignment = " text-align: " ~ item.text_alignment ~ ";" %}
+            {% else %}
+              {% set alignment = "" %}
+            {% endif %}
             {% if item.type == "img" %}
       				<article class="packery-item" style="width: {{item.width}}%">
       					<img src="{{item.img.url}}">
@@ -44,7 +50,7 @@
                   <span style="{{top}}">
 
                   </span>
-                  <div class="content">
+                  <div class="content" style="{{alignment}}">
                     {{item.text}}
                   </div>
                 </div>
@@ -82,9 +88,10 @@
                 style="width: {{item.width}}%; colour: {{text}};">
       					<div class="textbox-bg textbox-bg-long" style=" background-color: {{colour}};">
                   <span style="{{top}}"></span>
-                  <div class="content">
+                  <div class="content" style="{{alignment}}">
         						{{item.text}}
-        						<button href="{{item.link}}">{{item.link_text}}</button>
+        						<button href="{{item.link}}" style="{{alignment}}">
+                      {{item.link_text}}</button>
                   </div>
       					</div>
       				</article>
