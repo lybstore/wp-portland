@@ -17,8 +17,8 @@ $context = Timber::get_context();
 $context['post'] = Timber::get_post();
 $context['work'] = Timber::get_posts([
 	'post_type' => 'work',
-	'posts_per_page' => 20,
-	'numberposts' => 20,
+	'posts_per_page' => 22,
+	'numberposts' => 22,
 	'orderby' => 'meta_value',
 	'meta_key' => 'featured'
 ]);
