@@ -19,7 +19,7 @@ $context['work'] = Timber::get_posts([
 	'post_type' => 'work',
 	'posts_per_page' => 22,
 	'numberposts' => 22,
-	'orderby' => 'meta_value',
+	'orderby' => 'meta_value menu_order',
 	'meta_key' => 'featured'
 ]);
 $context['news'] = get_permalink( get_option( 'page_for_posts' ) );
