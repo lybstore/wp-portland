@@ -288,47 +288,6 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_58223cc90b02c",
-                    "label": "Text Alignment",
-                    "name": "text_alignment",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_581bd01b034ea",
-                                "operator": "==",
-                                "value": "txt"
-                            }
-                        ],
-                        [
-                            {
-                                "field": "field_581bd01b034ea",
-                                "operator": "==",
-                                "value": "url"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "center": "Centered",
-                        "left": "Left",
-                        "right": "Right"
-                    },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
                 }
             ]
         }
@@ -350,5 +309,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478639371
+    "modified": 1478304747
 }

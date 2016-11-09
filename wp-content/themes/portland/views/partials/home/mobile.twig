@@ -177,10 +177,12 @@
 
 	{% if tweet %}
 		<div class="col-sm-1 grid-block twitter-widget">
+			<div class="twitter-wrap">
 			<article class="small-tile tile">
 				<p><a href="https://twitter.com/{{tweet[0].user.screen_name}}">@{{tweet[0].user.screen_name}}</a></p>
 				<p>{{fn('render_tweet', tweet[0])}}</p>
 			</article>
+			</div>
 		</div>
 	{% endif %}
 
@@ -379,12 +381,14 @@
 	
 	<div class="col-sm-1 grid-block">
 		<a href="british-land">
-			<article class="small-tile tile">
-				<img class="tile" src="{{TimberImage(news[0].homeimg).src}}"/>
-				<div class="grid-headings">
-					<h2>{{news[0].title}}</h2>
-					<p><span class="heading--bold"><b>NEWS.</b></span></p>
-				</div>
+			<article class="col-sm-4">
+				<a href="news" class="grid-block--img">
+					<img src="{{TimberImage(post.news_img).src}}">
+					<div class="grid-headings">
+						<h2>{{post.news_title}}</h2>
+						<p><span class="heading--bold"><b>NEWS.</b></span></p>
+					</div>
+				</a>
 			</article>
 		</a>
 	</div>

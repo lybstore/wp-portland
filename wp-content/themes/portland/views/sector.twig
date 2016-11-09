@@ -13,9 +13,9 @@
       {% for post in posts %}
         <article class="section">
           <a href="{{post.link}}" style="background-image:
-            url('{{post.thumbnail.src}}');" class="work-full-bg">
+            url('{{post.thumbnail.src}}'); class="work-full-bg">
             <div class="work-headings">
-              <h2>{{post.title}}</h2>
+              <h2>{{post.subtitle}}</h2>
               <p class="work-subheading"><span class="heading--bold">WORK.</span>&nbsp;{{sector.name}}</p>
             </div>
           </a>
