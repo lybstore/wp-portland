@@ -125,6 +125,26 @@
 
 				<div class="col-sm-12 grid-block">
 					<div class="grid-block-inner">
+					
+						{% if work[5] %}
+							<article class="col-sm-2">
+								<a href="{{work[5].link}}" class="grid-block--img">
+									<img src="{{TimberImage(work[5].homeimg)}}">
+									<div class="grid-headings">
+										<h2>{{work[5].title}}</h2>
+										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[5].terms('sector')[0].name}}</p>
+									</div>
+									<div class="grid-block-hidden grid-block--lightgold grid-headings--back">
+										<p>
+											{{work[5].subtitle}}
+										</p>
+										<h3> view project </h3>
+									</div>
+								</a>
+							</article>
+						{% endif %}
+
+					
 						{% if work[2] %}
 							<article class="col-sm-2">
 							<div class="grid-block--img">
@@ -160,25 +180,6 @@
 						</div>
 						{% endif %}
 
-
-
-							{% if work[5] %}
-							<article class="col-sm-2">
-								<a href="{{work[5].link}}" class="grid-block--img">
-									<img src="{{TimberImage(work[5].homeimg)}}">
-									<div class="grid-headings">
-										<h2>{{work[5].title}}</h2>
-										<p><span class="heading--bold"><b>WORK.</b></span>&nbsp;{{work[5].terms('sector')[0].name}}</p>
-									</div>
-									<div class="grid-block-hidden grid-block--lightgold grid-headings--back">
-										<p>
-											{{work[5].subtitle}}
-										</p>
-										<h3> view project </h3>
-									</div>
-								</a>
-							</article>
-						{% endif %}
 						
 						{% if work[7] %}
 							<article class="col-sm-4">

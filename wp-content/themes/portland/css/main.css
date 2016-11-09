@@ -1418,6 +1418,26 @@ img {
 
   .playpause {
     display: block; } }
+.fp-tableCell {
+  background-position: bottom !important;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block; }
+
+.work-headings {
+  position: absolute;
+  padding: 0em 0em 0em 1.45em; }
+  .work-headings h2 {
+    font-family: portland-bold;
+    font-size: 3.5em;
+    line-height: 1;
+    text-transform: uppercase; }
+  .work-headings p {
+    font-size: 1.5em;
+    font-family: portland-book;
+    line-height: 1; }
+
 @media only screen and (min-width: 320px) {
   .modal-open {
     overflow: scroll !important; }
