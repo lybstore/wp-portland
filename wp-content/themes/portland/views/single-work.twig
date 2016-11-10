@@ -34,6 +34,7 @@
             {% if item.type == "img" %}
       				<article class="packery-item" style="width: {{item.width}}%">
       					<img src="{{item.img.url}}">
+                <div class="work-description">{{item.text}}</div>
       				</article>
             {% elseif item.type == "vid" %}
       				<article class="packery-item video-wrapper"

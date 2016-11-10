@@ -192,6 +192,13 @@
                                 "operator": "==",
                                 "value": "url"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_581bd01b034ea",
+                                "operator": "==",
+                                "value": "img"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -309,5 +316,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1478304747
+    "modified": 1478789396
 }
